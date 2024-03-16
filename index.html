@@ -10,7 +10,7 @@
         max-width: 1280px;
         width: 100%;
         background-image: url("background1.webp");
-        background-size: 100% auto;
+        background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
         transform: translateY(-100px);
@@ -20,6 +20,15 @@
       .italic-placeholder::placeholder {
         font-style: italic;
       }
+
+      .selected-feature-box {
+        background-color: #599954 !important;
+        color: white !important;
+      }
+
+      .selected-feature-box * {
+        color: white !important;
+      }
     </style>
   </head>
 
@@ -27,10 +36,10 @@
     <!-- Navigation -->
     <nav
       style="background-color: #161c1c; color: #599954"
-      class="md:p-6 sm:p-4 py-2 w-full relative z-10 sticky top-0 left-0"
+      class="md:p-6 lg:p-4 py-2 w-full relative z-10 sticky top-0 left-0"
     >
       <div
-        class="max-w-[1280px] mx-auto flex items-center justify-evenly md:gap-16 sm:gap-8 sm:text-3xl text-lg"
+        class="max-w-[1280px] mx-auto flex items-center justify-evenly md:gap-16 lg:gap-8 lg:text-3xl md:text-2xl sm:text-xl text-lg"
       >
         <div>
           <a
@@ -47,13 +56,9 @@
           >
         </div>
         <div
-          class="p-2 sm:text-4xl text-xl font-bold 
-          cursor-pointer hover:text-green-400 
-          transition-colors duration-100 ease-in"
+          class="p-2 lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold cursor-pointer hover:text-green-400 transition-colors duration-100 ease-in"
         >
-          <a href="/">
-            BROKOL
-          </a>
+          <a href="/"> BROKOL </a>
         </div>
         <div>
           <a
@@ -74,22 +79,29 @@
 
     <div
       id="responsiveDiv"
-      class="responsive-div mx-auto flex flex-col justify-between items-center"
+      class="responsive-div mx-auto flex flex-col justify-between items-center min-h-[1250px]"
     >
       <!-- Hero Section -->
-      <section id="about" class="p-8 pt-[250px] min-h-[600px]">
-        <div
-          class="max-w-5xl mx-auto md:space-y-48 sm:space-y-32 space-y-28 text-center"
-        >
+      <section
+        id="about"
+        class="p-8 lg:pt-[250px] md:pt-[190px] sm:pt-[200px] pt-[200px]"
+      >
+        <div class="max-w-5xl mx-auto text-center">
           <div
-            class="text-white sm:text-5xl text-3xl font-semibold flex flex-col gap-1 items-center"
+            class="text-white lg:text-5xl md:text-4xl sm:text-2xl sm:flex hidden font-semibold sm:flex-col gap-1 items-center"
           >
             <p>Take a receipt photo, receive expiry</p>
             <p>alerts, and reduce waste with our</p>
             <p>money-saving grocery app.</p>
           </div>
+          <div
+            class="sm:hidden box mx-auto text-3xl text-white font-semibold w-2/3"
+          >
+            Take a receipt photo, receive expiry alerts, and reduce waste with
+            our money-saving grocery app.
+          </div>
           <button
-            class="bg-black text-white sm:text-4xl text-2xl font-semibold py-6 px-16 rounded-full"
+            class="bg-black lg:mt-48 md:mt-32 mt-32 text-white lg:text-4xl md:text-2xl sm:text-xl font-semibold md:py-6 py-4 md:px-16 px-12 rounded-full"
           >
             Try Brokol Now!
           </button>
@@ -98,12 +110,14 @@
 
       <!-- Statistics Section -->
       <section
-        class="pt-[200px] text-white text-center flex flex-col items-center justify-between gap-32 min-h-[600px]"
+        class="text-white text-center flex flex-col items-center justify-between lg:gap-28 md:gap-24 sm:gap-20 gap-16"
         style="transform: translateY(90px)"
       >
-        <h2 class="sm:text-5xl text-3xl font-black">DID YOU KNOW?</h2>
+        <h2 class="lg:text-5xl md:text-4xl text-3xl font-black">
+          DID YOU KNOW?
+        </h2>
         <div class="space-y-4">
-          <p class="font-semibold sm:text-4xl text-xl leading-5">
+          <p class="font-semibold lg:text-4xl md:text-4xl text-2xl leading-5">
             <span
               class="rounded-md text-black p-1"
               style="background-color: #d1e48b"
@@ -111,10 +125,10 @@
             >
             of Canada's food waste
           </p>
-          <p class="font-semibold sm:text-4xl text-xl leading-5">
+          <p class="font-semibold lg:text-4xl md:text-3xl text-2xl leading-5">
             originates from households, yet
           </p>
-          <p class="font-semibold sm:text-4xl text-xl leading-5">
+          <p class="font-semibold lg:text-4xl md:text-3xl text-2xl leading-5">
             <span
               class="rounded-md text-black p-1"
               style="background-color: #d1e48b"
@@ -123,7 +137,7 @@
             of it is preventable!
           </p>
         </div>
-        <p class="font-semibold sm:text-4xl text-xl">
+        <p class="font-semibold lg:text-4xl md:text-3xl text-2xl">
           Scroll to see how you can help
         </p>
       </section>
@@ -132,79 +146,143 @@
     <!-- Beta Section -->
     <section
       id="beta"
-      class="mt-36 bg-green-100 p-24 min-h-[800px] flex items-center"
+      class="lg:mt-36 md:mt-24 mt-16 mx-auto bg-green-100 lg:py-24 md:py-16 sm:py-8 sm:px-16 py-6 px-6 min-h-[800px] flex"
       style="background-color: #d1e48b; color: #599954"
     >
       <div class="max-w-5xl mx-auto text-center flex flex-col gap-10">
-        <h2 class="sm:text-5xl text-3xl font-black my-6">TRY OUR BETA</h2>
-        <div class="flex gap-4 items-center justify-evenly text-start">
-          <div class="w-1/2">
-            <p class="sm:mb-16 mb-6 sm:text-3xl text-lg font-semibold">
+        <h2 class="lg:text-5xl md:text-4xl text-3xl font-black my-6">
+          TRY OUR BETA
+        </h2>
+        <div
+          class="flex md:flex-row flex-col lg:gap-16 md:gap-12 items-center justify-center text-start"
+        >
+          <div class="md:w-1/2">
+            <p
+              class="lg:mb-16 md:mb-12 mb-8 mb-6 lg:text-3xl md:text-2xl text-xl font-semibold md:text-left text-center"
+            >
               The Brokol App Beta is now available, and we are actively seeking
               your feedback to make it even better.
             </p>
-            <div class="flex flex-col sm:gap-6 gap-4 mb-4">
+            <div
+              class="flex md:flex-col flex-row md:gap-6 gap-10 md:mb-4 mb-12 justify-center"
+            >
               <div
-                class="flex gap-4 items-center bg-white font-semibold text-black sm:py-4 sm:ps-8 w-[360px] py-2 px-6 rounded-3xl sm:text-3xl text-lg"
+                class="squareDiv flex md:flex-row flex-col sm:gap-4 gap-2 items-center md:justify-start justify-center bg-white font-semibold text-black md:w-2/3 sm:w-1/3 w-1/3 rounded-3xl lg:text-xl md:text-xl sm:text-xl text-base lg:px-8 lg:py-4 md:px-6 md:py-3 sm:px-5 sm:py-2 px-3 py-1"
               >
-                <img src="./ios_logo.svg" alt="ios_logo" />
-                <p>Try for iOS</p>
+                <div class="lg:w-[59px] md:w-[48px] sm:w-[59px] w-[36px]">
+                  <img
+                    src="./ios_logo.svg"
+                    alt="ios_logo"
+                    class="max-w-full h-auto"
+                  />
+                </div>
+                <p class="md:block hidden">Try for iOS</p>
+                <div class="md:hidden flex flex-col items-center">
+                  <p>Try for</p>
+                  <p>iOS</p>
+                </div>
               </div>
               <div
-                class="flex gap-4 items-center bg-white font-semibold text-black sm:py-4 sm:ps-8 w-[360px] py-2 px-6 rounded-3xl sm:text-3xl text-lg"
+                class="squareDiv flex md:flex-row flex-col sm:gap-4 gap-2 items-center md:justify-start justify-center bg-white font-semibold text-black md:w-2/3 sm:w-1/3 w-1/3 rounded-3xl lg:text-xl md:text-xl sm:text-xl text-base lg:px-8 lg:py-4 md:px-6 md:py-3 sm:px-5 sm:py-2 px-3 py-1"
               >
-                <img src="./android_logo.svg" alt="ios_logo" />
-                <p>Try for Android</p>
+                <div class="lg:w-[59px] md:w-[48px] sm:w-[59px] w-[36px]">
+                  <img
+                    src="./android_logo.svg"
+                    alt="ios_logo"
+                    class="max-w-full h-auto"
+                  />
+                </div>
+                <p class="md:block hidden">Try for Android</p>
+                <div class="md:hidden flex flex-col items-center">
+                  <p>Try for</p>
+                  <p>Android</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="bg-black h-[500px] w-[250px] max-w-1/3 rounded-3xl">
-            [Image Frame]
+          <div class="md:w-1/4 w-3/4">
+            <img
+              src="./tempIphone.png"
+              alt="tempIphone"
+              class="max-w-full h-auto"
+            />
           </div>
         </div>
-        <div class="flex justify-between">
-          <div
-            class="bg-white flex flex-col items-center justify-end rounded-xl bg-white w-[230px] h-[250px] p-6 gap-4"
-          >
-            <img src="./scan_logo.svg" alt="scan_logo" width="140px" />
-            <div class="flex items-center">
-              <p class="font-semibold text-black text-lg h-[56px]">
-                Grocery Receipt Upload
-              </p>
+        <div class="relative pt-[50px] pb-[300px] overflow-x-hidden">
+          <div class="absolute flex justify-between gap-4">
+            <div
+              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+            >
+              <img
+                src="./scan_logo.svg"
+                alt="scan_logo"
+                width="140px"
+                class="max-w-full h-auto"
+              />
+              <div class="flex items-center">
+                <p
+                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+                >
+                  Grocery Receipt
+                  <br />
+                  Upload
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="bg-white flex flex-col items-center justify-end rounded-xl bg-white w-[230px] h-[250px] p-6 gap-4"
-          >
-            <img
-              src="./notification_logo.svg"
-              width="100px"
-              alt="notification_logo"
-            />
-            <div class="flex items-center">
-              <p class="font-semibold text-black text-lg h-[56px]">
-                Expiry Notifications
-              </p>
+            <div
+              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+            >
+              <img
+                src="./notification_logo.svg"
+                alt="notification_logo"
+                width="100px"
+                class="max-w-full h-auto"
+              />
+              <div class="flex items-center">
+                <p
+                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+                >
+                  Expiry
+                  <br />
+                  Notifications
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="bg-white flex flex-col items-center justify-end rounded-xl bg-white w-[230px] h-[250px] p-6 gap-4"
-          >
-            <img src="./pantry_logo.svg" alt="pantry_logo" width="120px" />
-            <div class="flex items-center">
-              <p class="font-semibold text-black text-lg h-[56px]">
-                Pantry, Fridge and Freezer Spaces
-              </p>
+            <div
+              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+            >
+              <img
+                src="./pantry_logo.svg"
+                alt="pantry_logo"
+                width="140px"
+                class="max-w-full h-auto"
+              />
+              <div class="flex items-center">
+                <p
+                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+                >
+                  Pantry, Fridge and
+                  <br />
+                  Freezer Spaces
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="bg-white flex flex-col items-center justify-end rounded-xl bg-white w-[230px] h-[250px] p-6 gap-4"
-          >
-            <img src="./recipt_logo.svg" alt="recipt_logo" width="120px" />
-            <div class="flex items-center">
-              <p class="font-semibold text-black text-lg h-[56px]">
-                Receipts History
-              </p>
+            <div
+              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+            >
+              <img
+                src="./recipt_logo.svg"
+                alt="recipt_logo"
+                width="120px"
+                class="max-w-full h-auto"
+              />
+              <div class="flex items-center">
+                <p
+                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+                >
+                  Receipts History
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -212,9 +290,18 @@
     </section>
 
     <!-- Features Section -->
-    <section id="team" class="p-24" style="background-color: #599954">
-      <div class="max-w-5xl mx-auto flex flex-col items-center gap-20">
-        <h2 class="sm:text-5xl text-3xl font-black" style="color: #d1e48b">
+    <section
+      id="team"
+      class="lg:p-24 md:p-16 sm:p-12 p-8"
+      style="background-color: #599954"
+    >
+      <div
+        class="max-w-5xl mx-auto flex flex-col items-center lg:gap-20 md:gap-16 gap-12"
+      >
+        <h2
+          class="lg:text-5xl md:text-4xl text-3xl font-black my-6"
+          style="color: #d1e48b"
+        >
           TEAM
         </h2>
         <div
@@ -248,13 +335,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-700 p-24">
+    <section id="contact" class="bg-gray-700 lg:p-24 md:p-16 sm:p-12 p-8">
       <div
-        class="max-w-5xl mx-auto text-center flex flex-col items-center gap-24"
+        class="max-w-5xl mx-auto text-center flex flex-col items-center lg:gap-24 md:gap-16 sm:gap-12 gap-8"
       >
-        <h2 class="sm:text-5xl text-3xl font-black text-white my-6">CONTACT</h2>
+        <h2 class="lg:text-5xl md:text-4xl text-3xl font-black text-white my-6">
+          CONTACT
+        </h2>
         <div
-          class="text-white text-3xl font-medium flex flex-col items-center gap-8"
+          class="text-white lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium flex flex-col items-center gap-8"
         >
           <div class="flex flex-col items-center">
             <p>For inquiries, please contact:</p>
@@ -262,44 +351,45 @@
           </div>
           <p>or schedule a meeting with us here.</p>
         </div>
-        <div class="mt-10">
-          <p class="text-white text-3xl font-medium mb-4">
+        <div class="mt-10 w-full">
+          <p
+            class="text-white lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium mb-4"
+          >
             Join our newsletter to stay updated!
           </p>
-          <div class="flex text-xl font-extralight">
+          <div
+            class="lg:w-3/5 sm:w-4/5 w-full flex mx-auto lg:text-xl md:text-lg text-base font-extralight"
+          >
             <input
               type="text"
-              class="h-full w-full px-4 py-2 rounded-none outline-none italic-placeholder"
+              class="w-full lg:h-[56px] md:h-[54px] sm:h-[52px] h-[50px] md:px-4 px-2 md:py-2 py-1 rounded-none outline-none italic-placeholder"
               placeholder="Type your email here"
             />
-            <button class="text-white bg-black px-4 py-1">Join</button>
+            <button class="text-white bg-black px-4 md:py-2 py-1">Join</button>
           </div>
         </div>
         <div class="flex justify-between w-full">
           <div>
             <p
               id="copyright_with_year"
-              class="text-white text-2xl font-medium"
+              class="text-white lg:text-2xl md:text-xl sm:text-lg text-base font-medium"
             ></p>
           </div>
-          <div class="flex justify-between gap-6">
+          <div class="flex justify-between lg:gap-6 md:gap-4 sm:gap-3 gap-3">
             <img
               src="./instagram_logo.svg"
               alt="instagram_logo"
-              width="32"
-              height="32px"
+              class="w-6 h-6 sm:w-8 sm:h-6 md:w-6 md:h-8 lg:w-10 lg:h-10"
             />
             <img
               src="./linkedin_logo.svg"
               alt="linkedin_logo"
-              width="32"
-              height="32px"
+              class="w-6 h-6 sm:w-8 sm:h-6 md:w-6 md:h-8 lg:w-10 lg:h-10"
             />
             <img
               src="./tiktok_logo.svg"
               alt="tiktok_logo"
-              width="32"
-              height="32px"
+              class="w-6 h-6 sm:w-8 sm:h-6 md:w-6 md:h-8 lg:w-10 lg:h-10"
             />
           </div>
         </div>
@@ -334,7 +424,7 @@
               var offsetPosition =
                 targetElement.getBoundingClientRect().top +
                 window.pageYOffset -
-                80;
+                60;
 
               window.scrollTo({
                 top: offsetPosition,
@@ -345,10 +435,47 @@
         });
       }
 
+      function adjustHeightToMakeSquare() {
+        var squareDivs = document.querySelectorAll(".squareDiv");
+
+        var width = window.innerWidth;
+
+        if (width < 768) {
+          squareDivs.forEach(function (squareDiv) {
+            var divWidth = squareDiv.offsetWidth;
+            squareDiv.style.height = divWidth + "px";
+          });
+        } else {
+          squareDivs.forEach(function (squareDiv) {
+            squareDiv.style.height = "";
+          });
+        }
+      }
+
+      window.onload = adjustHeightToMakeSquare;
+      window.onresize = adjustHeightToMakeSquare;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const boxes = document.querySelectorAll(".clickable-feature-box");
+
+        boxes.forEach((box) => {
+          box.addEventListener("click", function () {
+            boxes.forEach((innerBox) => {
+              innerBox.classList.remove("bg-green-100", "selected-feature-box");
+              innerBox.classList.add("bg-white");
+            });
+
+            this.classList.remove("bg-white");
+            this.classList.add("bg-green-100", "selected-feature-box");
+          });
+        });
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         adjustHeight();
         updateYear();
         addSmoothScroll();
+        adjustHeightToMakeSquare();
       });
     </script>
   </body>
