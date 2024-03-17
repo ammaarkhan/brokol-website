@@ -317,6 +317,20 @@
     </section>
 
     <script>
+      function checkScrollButtons() {
+        const scrollContainer = document.getElementById("scrollContainer");
+        const scrollLeftButton = document.getElementById("scrollLeft");
+        const scrollRightButton = document.getElementById("scrollRight");
+
+        if (scrollContainer.scrollWidth <= scrollContainer.clientWidth) {
+          scrollLeftButton.style.display = "none";
+          scrollRightButton.style.display = "none";
+        } else {
+          scrollLeftButton.style.display = "block";
+          scrollRightButton.style.display = "block";
+        }
+      }
+
       document
         .getElementById("scrollLeft")
         .addEventListener("click", function () {
@@ -332,6 +346,10 @@
             .getElementById("scrollContainer")
             .scrollBy({ left: 100, behavior: "smooth" });
         });
+
+      checkScrollButtons();
+
+      window.addEventListener("resize", checkScrollButtons);
     </script>
 
     <!-- Features Section -->
@@ -380,7 +398,7 @@
             >
               <span class="text-8xl font-bold">3</span>
             </div>
-            <div
+            <!-- <div
               class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
             >
               <span class="text-8xl font-bold">4</span>
@@ -389,7 +407,7 @@
               class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
             >
               <span class="text-8xl font-bold">5</span>
-            </div>
+            </div> -->
             <!-- Add more items if needed -->
           </div>
         </div>
@@ -403,27 +421,23 @@
         const carousel = document.getElementById("carousel");
         const carouselContainer = document.getElementById("carousel-container");
         const carouselItems = carousel.getElementsByClassName("carousel-item");
-        const indicatorsContainer = document.getElementById(
-          "carousel-indicators"
-        );
-
+        const indicatorsContainer = document.getElementById("carousel-indicators");
+    
         const prevButton = document.getElementById("prevButton");
         const nextButton = document.getElementById("nextButton");
-
+    
         let currentIndex = 0;
-
+    
         function updateIndicator() {
-          document
-            .querySelectorAll(".indicator")
-            .forEach((indicator, index) => {
-              if (index === currentIndex) {
-                indicator.classList.replace("bg-lime-200", "bg-white");
-              } else {
-                indicator.classList.replace("bg-white", "bg-lime-200");
-              }
-            });
+          document.querySelectorAll(".indicator").forEach((indicator, index) => {
+            if (index === currentIndex) {
+              indicator.classList.replace("bg-lime-200", "bg-white");
+            } else {
+              indicator.classList.replace("bg-white", "bg-lime-200");
+            }
+          });
         }
-
+    
         function scrollToItem(itemIndex) {
           currentIndex = itemIndex;
           const selectedItem = carouselItems[itemIndex];
@@ -435,26 +449,39 @@
             offsetDifference +
             selectedItem.offsetWidth / 2 -
             carouselContainer.offsetWidth / 2;
-
+    
           carouselContainer.scroll({
             left: scrollPosition,
             behavior: "smooth",
           });
           updateIndicator();
         }
-
+    
+        function checkScrollNecessity() {
+          const carouselWidth = carousel.scrollWidth;
+          const containerWidth = carouselContainer.offsetWidth;
+    
+          if (carouselWidth > containerWidth) {
+            prevButton.style.display = 'block';
+            nextButton.style.display = 'block';
+          } else {
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+          }
+        }
+    
         prevButton.addEventListener("click", () => {
           if (currentIndex > 0) {
             scrollToItem(currentIndex - 1);
           }
         });
-
+    
         nextButton.addEventListener("click", () => {
           if (currentIndex < carouselItems.length - 1) {
             scrollToItem(currentIndex + 1);
           }
         });
-
+    
         for (let i = 0; i < carouselItems.length; i++) {
           const indicator = document.createElement("div");
           indicator.classList.add(
@@ -471,10 +498,13 @@
           });
           indicatorsContainer.appendChild(indicator);
         }
-
+    
         scrollToItem(0);
+        checkScrollNecessity();
+        window.addEventListener('resize', checkScrollNecessity);
       });
     </script>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="bg-gray-700 lg:p-24 md:p-16 sm:p-12 p-8">
