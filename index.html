@@ -29,10 +29,19 @@
       .selected-feature-box * {
         color: white !important;
       }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE, Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
     </style>
   </head>
 
-  <body class="bg-black overflow-x-hidden">
+  <body class="bg-black">
     <!-- Navigation -->
     <nav
       style="background-color: #161c1c; color: #599954"
@@ -146,7 +155,7 @@
     <!-- Beta Section -->
     <section
       id="beta"
-      class="lg:mt-36 md:mt-24 mt-16 mx-auto bg-green-100 lg:py-24 md:py-16 sm:py-8 sm:px-16 py-6 px-6 min-h-[800px] flex"
+      class="overflow-x-hidden flex flex-col lg:mt-36 md:mt-24 mt-16 mx-auto bg-green-100 lg:py-24 md:py-16 sm:py-8 sm:px-16 py-6 px-6 min-h-[800px] flex"
       style="background-color: #d1e48b; color: #599954"
     >
       <div class="max-w-5xl mx-auto text-center flex flex-col gap-10">
@@ -154,7 +163,7 @@
           TRY OUR BETA
         </h2>
         <div
-          class="flex md:flex-row flex-col lg:gap-16 md:gap-12 items-center justify-center text-start"
+          class="max-w-full flex md:flex-row flex-col lg:gap-16 md:gap-12 items-center justify-center text-start"
         >
           <div class="md:w-1/2">
             <p
@@ -208,86 +217,122 @@
             />
           </div>
         </div>
-        <div class="relative pt-[50px] pb-[300px] overflow-x-hidden">
-          <div class="absolute flex justify-between gap-4">
-            <div
-              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
-            >
-              <img
-                src="./scan_logo.svg"
-                alt="scan_logo"
-                width="140px"
-                class="max-w-full h-auto"
-              />
-              <div class="flex items-center">
-                <p
-                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
-                >
-                  Grocery Receipt
-                  <br />
-                  Upload
-                </p>
-              </div>
+      </div>
+
+      <div class="flex items-center pt-24 sm:pb-12">
+        <button
+          id="scrollLeft"
+          class="absolute cursor-pointer left-0 z-10 bg-gray-800 text-white p-4"
+        >
+          &lt;
+        </button>
+
+        <div
+          id="scrollContainer"
+          class="flex gap-4 overflow-auto scroll-smooth w-fit mx-auto scrollbar-hide"
+        >
+          <div
+            class="clickable-feature-box cursor-pointer flex-shrink-0 bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+          >
+            <img
+              src="./scan_logo.svg"
+              alt="scan_logo"
+              width="140px"
+              class="max-w-full h-auto"
+            />
+            <div class="flex items-center">
+              <p
+                class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+              >
+                Grocery Receipt
+                <br />
+                Upload
+              </p>
             </div>
-            <div
-              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
-            >
-              <img
-                src="./notification_logo.svg"
-                alt="notification_logo"
-                width="100px"
-                class="max-w-full h-auto"
-              />
-              <div class="flex items-center">
-                <p
-                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
-                >
-                  Expiry
-                  <br />
-                  Notifications
-                </p>
-              </div>
+          </div>
+          <div
+            class="clickable-feature-box cursor-pointer flex-shrink-0 bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+          >
+            <img
+              src="./notification_logo.svg"
+              alt="notification_logo"
+              width="100px"
+              class="max-w-full h-auto"
+            />
+            <div class="flex items-center">
+              <p
+                class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+              >
+                Expiry
+                <br />
+                Notifications
+              </p>
             </div>
-            <div
-              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
-            >
-              <img
-                src="./pantry_logo.svg"
-                alt="pantry_logo"
-                width="140px"
-                class="max-w-full h-auto"
-              />
-              <div class="flex items-center">
-                <p
-                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
-                >
-                  Pantry, Fridge and
-                  <br />
-                  Freezer Spaces
-                </p>
-              </div>
+          </div>
+          <div
+            class="clickable-feature-box cursor-pointer flex-shrink-0 bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+          >
+            <img
+              src="./pantry_logo.svg"
+              alt="pantry_logo"
+              width="140px"
+              class="max-w-full h-auto"
+            />
+            <div class="flex items-center">
+              <p
+                class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+              >
+                Pantry, Fridge and
+                <br />
+                Freezer Spaces
+              </p>
             </div>
-            <div
-              class="clickable-feature-box cursor-pointer bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
-            >
-              <img
-                src="./recipt_logo.svg"
-                alt="recipt_logo"
-                width="120px"
-                class="max-w-full h-auto"
-              />
-              <div class="flex items-center">
-                <p
-                  class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
-                >
-                  Receipts History
-                </p>
-              </div>
+          </div>
+          <div
+            class="clickable-feature-box cursor-pointer flex-shrink-0 bg-white flex flex-col items-center justify-end rounded-xl bg-white sm:w-[230px] w-[180px] sm:h-[250px] h-[200px] sm:p-6 p-4 sm:gap-4 gap-2"
+          >
+            <img
+              src="./recipt_logo.svg"
+              alt="recipt_logo"
+              width="120px"
+              class="max-w-full h-auto"
+            />
+            <div class="flex items-center">
+              <p
+                class="font-semibold text-black sm:text-lg text-sm sm:h-[56px] h-[36px]"
+              >
+                Receipts History
+              </p>
             </div>
           </div>
         </div>
+
+        <button
+          id="scrollRight"
+          class="absolute cursor-pointer right-0 z-10 bg-gray-800 text-white p-4"
+        >
+          &gt;
+        </button>
       </div>
     </section>
+
+    <script>
+      document
+        .getElementById("scrollLeft")
+        .addEventListener("click", function () {
+          document
+            .getElementById("scrollContainer")
+            .scrollBy({ left: -100, behavior: "smooth" });
+        });
+
+      document
+        .getElementById("scrollRight")
+        .addEventListener("click", function () {
+          document
+            .getElementById("scrollContainer")
+            .scrollBy({ left: 100, behavior: "smooth" });
+        });
+    </script>
 
     <!-- Features Section -->
     <section
@@ -295,44 +340,141 @@
       class="lg:p-24 md:p-16 sm:p-12 p-8"
       style="background-color: #599954"
     >
-      <div
-        class="max-w-5xl mx-auto flex flex-col items-center lg:gap-20 md:gap-16 gap-12"
-      >
+      <div class="max-w-5xl mx-auto flex flex-col items-center">
         <h2
-          class="lg:text-5xl md:text-4xl text-3xl font-black my-6"
+          class="lg:text-5xl md:text-4xl text-3xl font-black my-6 lg:mb-20 md:mb-16 mb-12"
           style="color: #d1e48b"
         >
           TEAM
         </h2>
-        <div
-          class="flex gap-12 justify-start w-full overflow-hidden flex-nowrap"
-        >
+        <div id="carousel-container" class="w-full overflow-hidden">
+          <button
+            id="prevButton"
+            class="absolute left-0 z-10 mt-48 bg-gray-800 text-white p-4"
+          >
+            &lt;
+          </button>
+          <button
+            id="nextButton"
+            class="absolute right-0 z-10 mt-48 bg-gray-800 text-white p-4"
+          >
+            &gt;
+          </button>
           <div
-            class="flex-shrink-0 bg-gray-300 h-[450px] w-[300px] rounded-2xl"
-          ></div>
-          <div
-            class="flex-shrink-0 bg-gray-300 h-[450px] w-[300px] rounded-2xl"
-          ></div>
-          <div
-            class="flex-shrink-0 bg-gray-300 h-[450px] w-[300px] rounded-2xl"
-          ></div>
-          <div
-            class="flex-shrink-0 bg-gray-300 h-[450px] w-[300px] rounded-2xl"
-          ></div>
+            id="carousel"
+            class="w-fit flex lg:gap-12 md:gap-10 sm:gap-8 gap-8 justify-start flex-nowrap"
+          >
+            <!-- Carousel items here -->
+            <div
+              class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
+            >
+              <span class="text-8xl font-bold">1</span>
+            </div>
+            <div
+              class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
+            >
+              <span class="text-8xl font-bold">2</span>
+            </div>
+            <div
+              class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
+            >
+              <span class="text-8xl font-bold">3</span>
+            </div>
+            <div
+              class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
+            >
+              <span class="text-8xl font-bold">4</span>
+            </div>
+            <div
+              class="carousel-item flex-shrink-0 bg-gray-300 h-96 w-60 sm:h-[430px] sm:w-[280px] md:h-[440px] md:w-[290px] lg:h-[450px] lg:w-[300px] rounded-2xl"
+            >
+              <span class="text-8xl font-bold">5</span>
+            </div>
+            <!-- Add more items if needed -->
+          </div>
+        </div>
+        <div id="carousel-indicators" class="flex gap-4 justify-center mt-10">
+          <!-- Indicators will be added by JavaScript -->
         </div>
       </div>
-      <div class="flex gap-4 justify-center mt-10">
-        <div class="rounded-full w-4 h-4 bg-white"></div>
-        <div
-          class="rounded-full w-4 h-4 bg-white"
-          style="background-color: #d1e48b"
-        ></div>
-        <div
-          class="rounded-full w-4 h-4 bg-white"
-          style="background-color: #d1e48b"
-        ></div>
-      </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.getElementById("carousel");
+        const carouselContainer = document.getElementById("carousel-container");
+        const carouselItems = carousel.getElementsByClassName("carousel-item");
+        const indicatorsContainer = document.getElementById(
+          "carousel-indicators"
+        );
+
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+
+        let currentIndex = 0;
+
+        function updateIndicator() {
+          document
+            .querySelectorAll(".indicator")
+            .forEach((indicator, index) => {
+              if (index === currentIndex) {
+                indicator.classList.replace("bg-lime-200", "bg-white");
+              } else {
+                indicator.classList.replace("bg-white", "bg-lime-200");
+              }
+            });
+        }
+
+        function scrollToItem(itemIndex) {
+          currentIndex = itemIndex;
+          const selectedItem = carouselItems[itemIndex];
+          const carouselOffset = carouselContainer.getBoundingClientRect().left;
+          const selectedItemOffset = selectedItem.getBoundingClientRect().left;
+          const offsetDifference = selectedItemOffset - carouselOffset;
+          const scrollPosition =
+            carouselContainer.scrollLeft +
+            offsetDifference +
+            selectedItem.offsetWidth / 2 -
+            carouselContainer.offsetWidth / 2;
+
+          carouselContainer.scroll({
+            left: scrollPosition,
+            behavior: "smooth",
+          });
+          updateIndicator();
+        }
+
+        prevButton.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            scrollToItem(currentIndex - 1);
+          }
+        });
+
+        nextButton.addEventListener("click", () => {
+          if (currentIndex < carouselItems.length - 1) {
+            scrollToItem(currentIndex + 1);
+          }
+        });
+
+        for (let i = 0; i < carouselItems.length; i++) {
+          const indicator = document.createElement("div");
+          indicator.classList.add(
+            "indicator",
+            "rounded-full",
+            "w-4",
+            "h-4",
+            "bg-lime-200",
+            "cursor-pointer"
+          );
+          indicator.setAttribute("data-index", i.toString());
+          indicator.addEventListener("click", function () {
+            scrollToItem(parseInt(this.getAttribute("data-index")));
+          });
+          indicatorsContainer.appendChild(indicator);
+        }
+
+        scrollToItem(0);
+      });
+    </script>
 
     <!-- Contact Section -->
     <section id="contact" class="bg-gray-700 lg:p-24 md:p-16 sm:p-12 p-8">
