@@ -76,7 +76,7 @@
         <div
           class="p-2 lg:text-4xl md:text-3xl sm:text-2xl text-lg font-bold transition-colors duration-100 ease-in"
         >
-          <a href="/about"> BROKOL </a>
+          <a href="#about" class="cursor-default"> BROKOL </a>
         </div>
         <div>
           <a
@@ -118,11 +118,13 @@
             Take a receipt photo, receive expiry alerts, and reduce waste with
             our money-saving grocery app.
           </div>
-          <button
-            class="bg-black lg:mt-48 md:mt-32 mt-32 text-white lg:text-4xl md:text-2xl sm:text-xl font-semibold md:py-6 py-4 md:px-16 px-12 rounded-full"
-          >
-            Try Brokol Now!
-          </button>
+          <a href="#beta">
+            <button
+              class="bg-black lg:mt-48 md:mt-32 mt-32 text-white lg:text-4xl md:text-2xl sm:text-xl font-semibold md:py-6 py-4 md:px-16 px-12 rounded-full"
+            >
+              Try Brokol Now!
+            </button>
+          </a>
         </div>
       </section>
 
@@ -176,7 +178,7 @@
         >
           <div class="md:w-1/2">
             <p
-              class="lg:mb-16 md:mb-12 mb-8 mb-6 lg:text-3xl md:text-2xl text-xl font-semibold md:text-left text-center"
+              class="lg:mb-16 md:mb-12 mb-8 mb-6 lg:text-3xl md:text-2xl text-xl font-semibold text-center"
             >
               The Brokol App Beta is now available, and we are actively seeking
               your feedback to make it even better.
@@ -215,7 +217,7 @@
                 id="androidLink"
                 class="squareDiv cursor-pointer flex md:flex-row flex-col sm:gap-4 gap-2 items-center md:justify-start justify-center bg-white font-semibold text-black md:w-2/3 sm:w-1/3 w-1/3 rounded-3xl lg:text-xl md:text-xl sm:text-xl text-sm lg:px-8 lg:py-4 md:px-6 md:py-3 sm:px-5 sm:py-2 px-3 py-1"
               >
-                <div class="lg:w-[68px] md:w-[68px] sm:w-[68px] w-[40px]">
+                <div class="lg:w-[60px] md:w-[60px] sm:w-[60px] w-[40px]">
                   <img
                     src="./android_logo.svg"
                     alt="ios_logo"
@@ -240,12 +242,28 @@
               }
             </script>
           </div>
-          <div class="md:w-1/4 w-3/4">
-            <img
-              src="./tempIphone.png"
-              alt="tempIphone"
-              class="max-w-full h-auto"
-            />
+          <div class="relative">
+            <video
+            style="border-radius: 45px;"
+              class="-z-10 w-[248px] h-[495px] translate-y-[11px]"
+              src="Receipt-Photo-Demo.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+            ></video>
+            <div
+            style="
+              position: absolute;
+              top: 0px;
+              background-image: url('phone_mockup.webp');
+              background-size: contain;
+              background-repeat: no-repeat;
+            "
+            class="w-[245px] h-[550px] z-10"
+          >
+            
+          </div>
           </div>
         </div>
       </div>
@@ -401,7 +419,9 @@
           TEAM
         </h2>
         <div>
-          <p class="text-center text-white lg:text-4xl lg:leading-relaxed md:tex-3xl md:leading-normal text-2xl leading-snug">
+          <p
+            class="text-center text-white lg:text-4xl lg:leading-relaxed md:tex-3xl md:leading-normal text-2xl leading-snug"
+          >
             We are a team of students from UBC Okanagan, working to create a
             transformative tool with Brokol App that addresses food waste in our
             community. Driven by our shared goal of fostering sustainable
@@ -561,7 +581,9 @@
         <div
           class="max-w-5xl mx-auto text-center flex flex-col items-center lg:gap-24 md:gap-16 sm:gap-12 gap-8"
         >
-          <h2 class="lg:text-5xl md:text-4xl text-3xl font-black text-white my-6">
+          <h2
+            class="lg:text-5xl md:text-4xl text-3xl font-black text-white my-6"
+          >
             CONTACT
           </h2>
           <div
@@ -576,7 +598,15 @@
                 >
               </p>
             </div>
-            <p>or schedule a meeting with us here.</p>
+            <p>
+              or schedule a meeting with us
+              <a
+                class="underline"
+                href="https://calendly.com/priscilla-brokol/the-brokol-team-wants-your-expert-feedback?month=2024-02"
+                >here</a
+              >
+              .
+            </p>
           </div>
           <div class="mt-10 w-full">
             <p
@@ -592,7 +622,9 @@
                 class="w-full lg:h-[56px] md:h-[54px] sm:h-[52px] h-[50px] md:px-4 px-2 md:py-2 py-1 rounded-none outline-none italic-placeholder"
                 placeholder="Type your email here"
               />
-              <button class="text-white bg-black px-4 md:py-2 py-1">Join</button>
+              <button class="text-white bg-black px-4 md:py-2 py-1">
+                Join
+              </button>
             </div>
           </div>
           <div class="flex justify-between w-full">
@@ -650,7 +682,7 @@
       }
 
       function addSmoothScroll() {
-        document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             e.preventDefault();
             console.log("hi ");
