@@ -4,7 +4,10 @@ import Image from 'next/image';
 import projectZeroLogo from '../app/images/projectzero.png';
 import eubcologo from '../app/images/eubco.png';
 import mitacslogo from '../app/images/mitacs.png';
-import bowlIcon from '../app/images/bowl.svg';
+import benefit1 from '../app/images/benefit1.png';
+import benefit2 from '../app/images/benefit2.png';
+import benefit3 from '../app/images/benefit3.png';
+import benefit4 from '../app/images/benefit4.png';
 
 export default function Home() {
   return (
@@ -38,7 +41,7 @@ export default function Home() {
             <iframe
               width="704"
               height="396"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your actual video URL
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with actual video URL
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -65,59 +68,52 @@ export default function Home() {
           </div>
         </section>
   
-        <section id="benefits" className="bg-white text-black py-16">
-          <div className="container mx-auto text-center">
+        <section id="benefits" className="bg-white text-black py-8">
+          <div className="container mx-auto text-center max-w-4xl">
             <h2 className="text-3xl font-bold mb-8">Why Brokol Meal Planner? What benefits you get?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-              <div className="flex items-center p-4 bg-background-green text-white rounded-lg mx-4 md:mx-auto max-w-sm md:max-w-none">
-                <div className="flex items-center justify-center w-16 h-16 mr-4 bg-white rounded-full">
-                  
-                
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 px-4">
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+                  <Image src={benefit1} alt="Reduce Overwhelm" width={90} height={90} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Reduce Overwhelm</h3>
-                  <p>Effortlessly manage meal planning and stress with an ADHD-friendly interface.</p>
-                </div>
-              </div>
-              <div className="flex items-center p-4 bg-background-green text-white rounded-lg mx-4 md:mx-auto max-w-sm md:max-w-none">
-                <div className="flex items-center justify-center w-16 h-16 mr-4 bg-white rounded-full">
-                  
-                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Personalize Meals</h3>
-                  <p>Quickly create meal plans with your favorite recipes to fit your preferences.</p>
+                <div className="flex flex-col justify-center flex-grow gap-3">
+                  <h3 className="pl-3 text-left text-xl font-semibold">Reduce Overwhelm</h3>
+                  <p className="pl-3 text-left pr-3">Effortlessly manage meal planning and stress with an ADHD-friendly interface.</p>
                 </div>
               </div>
-              <div className="flex items-center p-4 bg-background-green text-white rounded-lg mx-4 md:mx-auto max-w-sm md:max-w-none">
-                <div className="flex items-center justify-center w-16 h-16 mr-4 bg-white rounded-full">
-                  
-                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    
-                  </svg>
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+                  <Image src={benefit2} alt="Personalize Meals" width={90} height={90} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Shop Efficiently</h3>
-                  <p>Get categorized shopping lists for quick and easy grocery trips.</p>
+                <div className="flex flex-col justify-center flex-grow gap-3">
+                  <h3 className="pl-3 text-left text-xl font-semibold">Personalize Meals</h3>
+                  <p className="pl-3 text-left pr-3">Quickly create meal plans with your favorite recipes to fit your preferences.</p>
                 </div>
               </div>
-              <div className="flex items-center p-4 bg-background-green text-white rounded-lg mx-4 md:mx-auto max-w-sm md:max-w-none">
-                <div className="flex items-center justify-center w-16 h-16 mr-4 bg-white rounded-full">
-                  
-                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    
-                  </svg>
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+                  <Image src={benefit3} alt="Shop Efficiently" width={90} height={90} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Simplify Cooking</h3>
-                  <p>Create easy recipes that make cooking enjoyable and stress-free.</p>
+                <div className="flex flex-col justify-center flex-grow gap-3">
+                  <h3 className="pl-3 text-left text-xl font-semibold">Shop Efficiently</h3>
+                  <p className="pl-3 text-left pr-3">Get categorized shopping lists for quick and easy grocery trips.</p>
+                </div>
+              </div>
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+                  <Image src={benefit4} alt="Simplify Cooking" width={90} height={90} />
+                </div>
+                <div className="flex flex-col justify-center flex-grow gap-3">
+                  <h3 className="pl-3 text-left text-xl font-semibold">Simplify Cooking</h3>
+                  <p className="pl-3 text-left pr-3">Create easy recipes that make cooking enjoyable and stress-free.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+
+
 
 
 
