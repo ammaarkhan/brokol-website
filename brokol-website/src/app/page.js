@@ -8,6 +8,9 @@ import benefit1 from '../app/images/benefit1.png';
 import benefit2 from '../app/images/benefit2.png';
 import benefit3 from '../app/images/benefit3.png';
 import benefit4 from '../app/images/benefit4.png';
+import step1 from '../app/images/step1.png';
+import step2 from '../app/images/step2.png';
+import step3 from '../app/images/step3.png';
 
 export default function Home() {
   return (
@@ -71,6 +74,7 @@ export default function Home() {
         <section id="benefits" className="bg-white text-black py-8">
           <div className="container mx-auto text-center max-w-4xl">
             <h2 className="text-3xl font-bold mb-8">Why Brokol Meal Planner? What benefits you get?</h2>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 px-4">
               <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
                 <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
@@ -112,6 +116,43 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="steps" className="bg-background-green text-white py-16">
+          <div className="container mx-auto  max-w-4xl">
+            <h2 className="text-3xl mb-8 text-left pl-10">BROKOL lets you create your personalized meal plan effortlessly. <span className="font-bold">It just takes 3 simple steps!</span></h2>
+            <div className="grid grid-cols-1 gap-y-8 px-4">
+              <div className="flex flex-col md:flex-row items-center p-4 bg-white text-black rounded-lg mx-4 w-full md:max-w-full">
+                <div className="flex justify-center items-center w-24 h-24 bg-background-green text-white font-bold rounded-full mb-4 md:mb-0 md:mr-8">
+                  (1)
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold mb-3 text-left">Fill in your preferences</h3>
+                  <p className="text-left mb-3">Such as number of meals, dietary restrictions, and others. Include any favorite recipes you might have.</p>
+                  <Image src={step1} alt="Step 1" className="rounded-lg shadow-lg" />
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row items-center p-4 bg-white text-black rounded-lg mx-4 w-full md:max-w-full">
+                <div className="flex justify-center items-center w-24 h-24 bg-background-green text-white font-bold rounded-full mb-4 md:mb-0 md:mr-8">
+                  (2)
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold mb-3 text-left">Generate your personalized meal plan</h3>
+                  <p className="text-left mb-3">Customize by deleting or adjusting meals. Don't forget to keep your favorite(s)!</p>
+                  <Image src={step2} alt="Step 2" className="rounded-lg shadow-lg" />
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row items-center p-4 bg-white text-black rounded-lg mx-4 w-full md:max-w-full">
+                <div className="flex justify-center items-center w-24 h-24 bg-background-green text-white font-bold rounded-full mb-4 md:mb-0 md:mr-8">
+                  (3)
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold mb-3 text-left">Get your meal plan and categorized shopping list</h3>
+                  <p className="text-left mb-3">Done!</p>
+                  <Image src={step3} alt="Step 3" className="rounded-lg shadow-lg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
 
