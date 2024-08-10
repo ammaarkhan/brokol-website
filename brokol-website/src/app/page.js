@@ -11,6 +11,7 @@ import benefit4 from '../app/images/benefit4.png';
 import step1 from '../app/images/step1.png';
 import step2 from '../app/images/step2.png';
 import step3 from '../app/images/step3.png';
+import user1 from '../app/images/user1.png';
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       <TopBar />
 
       <main className="bg-background-green text-white">
-        <section id="hero" className="relative min-h-[50vh] flex flex-col items-center justify-center text-center px-4">
+        <section id="demo" className="relative min-h-[50vh] flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-4xl font-bold mb-4 mt-20">
             Simplified Meal Planning for <span className="text-brokol-green">ADHD</span>
           </h1>
@@ -34,7 +35,7 @@ export default function Home() {
             <input
               type="email"
               placeholder="Type your email ..."
-              className="px-4 py-2 text-black rounded-l-lg focus:outline-none"
+              className="w-96 px-4 py-2 text-black rounded-l-lg focus:outline-none"
             />
             <button className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
               Get Early Access
@@ -116,43 +117,93 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="steps" className="bg-background-green text-white py-16">
-          <div className="container mx-auto  max-w-4xl">
+        <section id="how-it-works" className="bg-background-green text-white py-16">
+          <div className="container mx-auto  max-w-3xl">
             <h2 className="text-3xl mb-8 text-left pl-10">BROKOL lets you create your personalized meal plan effortlessly. <span className="font-bold">It just takes 3 simple steps!</span></h2>
-            <div className="grid grid-cols-1 gap-y-8 px-4">
-              <div className="flex flex-col md:flex-row items-center p-4 bg-white text-black rounded-lg mx-4 w-full md:max-w-full">
-                <div className="flex justify-center items-center w-24 h-24 bg-background-green text-white font-bold rounded-full mb-4 md:mb-0 md:mr-8">
-                  (1)
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-3 text-left">Fill in your preferences</h3>
-                  <p className="text-left mb-3">Such as number of meals, dietary restrictions, and others. Include any favorite recipes you might have.</p>
-                  <Image src={step1} alt="Step 1" className="rounded-lg shadow-lg" />
+            <div className="space-y-8">
+              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
+                
+                <div className="md:w-1/2 text-left pl-16 pr-28"><span className="text-white text-2xl font-bold font-['Inter']">( 1 )<br/></span><span className="text-white text-lg font-normal font-['Inter']"><br/></span><span className="text-white text-lg font-bold font-['Inter']">Fill in your preferences </span><span className="text-white text-lg font-normal font-['Inter']">such as number of meals, dietary restrictions, and others.<br/><br/>Include any favorite recipes you might have.</span></div>
+                
+                <div className="md:w-1/2 mt-4 mr-3">
+                  <Image src={step1} alt="Step 1" />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row items-center p-4 bg-white text-black rounded-lg mx-4 w-full md:max-w-full">
-                <div className="flex justify-center items-center w-24 h-24 bg-background-green text-white font-bold rounded-full mb-4 md:mb-0 md:mr-8">
-                  (2)
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-3 text-left">Generate your personalized meal plan</h3>
-                  <p className="text-left mb-3">Customize by deleting or adjusting meals. Don't forget to keep your favorite(s)!</p>
-                  <Image src={step2} alt="Step 2" className="rounded-lg shadow-lg" />
+              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
+              <div className="md:w-1/2 text-left pl-16 pr-24 py-3"><span className="text-white text-2xl font-bold font-['Inter']">( 2 )<br/></span><span className="text-white text-lg font-normal font-['Inter']"><br/></span><span className="text-white text-lg font-bold font-['Inter']">Generate your personalized meal plan. <br/><br/> </span><span className="text-white text-lg font-normal font-['Inter']">Customize by deleting or adjusting meals.<br/><br/>Don’t forget to keep<br/> your favorite(s)!</span></div>
+                <div className="md:w-1/2  mt-8 mr-4">
+                  <Image src={step2} alt="Step 2" />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row items-center p-4 bg-white text-black rounded-lg mx-4 w-full md:max-w-full">
-                <div className="flex justify-center items-center w-24 h-24 bg-background-green text-white font-bold rounded-full mb-4 md:mb-0 md:mr-8">
-                  (3)
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-3 text-left">Get your meal plan and categorized shopping list</h3>
-                  <p className="text-left mb-3">Done!</p>
-                  <Image src={step3} alt="Step 3" className="rounded-lg shadow-lg" />
-                </div>
+              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg  bg-background-green">
+              <div className="md:w-1/2 text-left pl-16 pr-20"><span className="text-white text-2xl font-bold font-['Inter']">( 3 )<br/></span><span className="text-white text-lg font-normal font-['Inter']"><br/></span><span className="text-white text-lg font-bold font-['Inter']">Get your meal plan and categorized shopping list.</span><span className="text-white text-lg font-normal font-['Inter']"><br/><br/>Done!</span></div>
+              <div className="md:w-1/2 flex justify-center items-center">
+                <Image
+                  src={step3}
+                  alt="Step 3"
+                  className="rounded-t-lg shadow-lg mt-10 mr-10 object-cover"
+                  style={{ borderBottomLeftRadius: '0', borderBottomRightRadius: '0', height: '70%', width: '70%' }}
+                />
+              </div>
+
               </div>
             </div>
           </div>
         </section>
+
+        <section id="testimonials" className="bg-white text-black py-16">
+          <div className="container mx-auto text-left max-w-4xl">
+            <h2 className="text-3xl font-normal mb-8 px-5">
+              Don’t just take our words. <span className="font-bold">Read what people with ADHD say about our meal planner.</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+              <div className="p-6 bg-background-green text-white rounded-lg px-7">
+                <div className="flex items-center mb-4">
+                  <span className="text-lg font-semibold text-brokol-green">★★★★★</span>
+                </div>
+                <p className="text-lg mb-4 pb-6 pt-1">
+                  “The meal planner eliminated all controllable overwhelm. Once I had the meals picked, it was really easy to pick out what groceries I need to buy.”
+                </p>
+                <div className="flex items-center">
+                  <Image src={user1} alt="Nicole's Avatar" width={40} height={40} className="rounded-full" />
+                  <div className="ml-4 text-left">
+                    <p className="text-sm font-semibold">Nicole (20s), living with her partner</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 bg-background-green text-white rounded-lg">
+                <div className="flex items-center mb-4">
+                  <span className="text-lg font-semibold text-brokol-green">★★★★★</span>
+                </div>
+                <p className="text-lg mb-4">
+                  “I love how easy it is to make quick changes, and how I can keep updating it to fit my needs. For example, I was getting too many zucchini recipes, so I just adjusted it, and now it's perfect for me!”
+                </p>
+                <div className="flex items-center">
+                  <Image src={user1} alt="Laura's Avatar" width={40} height={40} className="rounded-full" />
+                  <div className="ml-4 text-left">
+                    <p className="text-sm font-semibold">Laura (50s), living alone</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 text-center bg-white border border-background-green border-2 rounded-lg p-8 shadow-md mx-4">
+              <h3 className="text-3xl font-semibold my-4">
+                Join 70+ ADHDers as an early adopter to<br/> reduce the overwhelm of meal planning.
+              </h3>
+              <div className="flex justify-center my-8">
+                <input
+                  type="email"
+                  placeholder="Type your email ..."
+                  className="px-4 py-2 text-black rounded-l-lg border border-background-green focus:outline-none w-96"
+                />
+                <button className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
+                  Get Early Access
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
 
 
