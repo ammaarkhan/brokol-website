@@ -12,6 +12,10 @@ import step1 from '../app/images/step1.png';
 import step2 from '../app/images/step2.png';
 import step3 from '../app/images/step3.png';
 import user1 from '../app/images/user1.png';
+import instagram from '../app/images/instagram.png';
+import linkedin from '../app/images/linkedin.png';
+import tiktok from '../app/images/tiktok.png';
+import threads from '../app/images/threads.png';
 
 export default function Home() {
   return (
@@ -204,6 +208,39 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="footer" className="bg-background-green text-white py-8">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="text-4xl font-black mb-4 text-brokol-green">BROKOL</h3>
+              <div className="flex space-x-4">
+                <a href="#" aria-label="Instagram">
+                  <Image src={instagram} alt="Instagram" className="w-8 h-8 mt-1" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
+                </a>
+                <a href="#" aria-label="TikTok">
+                  <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
+                </a>
+                <a href="#" aria-label="Threads">
+                  <Image src={threads} alt="Threads" className="w-8 h-8" />
+                </a>
+              </div>
+            </div>
+            <div className="mt-8 md:mt-0">
+              <p className="text-center md:text-right py-1">Have any questions?</p>
+              <p className="text-center md:text-right">
+                Contact us at <a href="mailto:hello@brokol.app" className="underline">hello@brokol.app</a>
+              </p>
+            </div>
+          </div>
+          <div className="container mx-auto mt-8 border-t border-gray-700 pt-4 flex justify-center space-x-8 text-sm">
+            <p>© 2024 BROKOL. All rights reserved.</p>
+            <a href="#" className="hover:underline">About Us</a>
+            <a href="#" className="hover:underline">Terms & Conditions</a>
+            <a href="#" className="hover:underline">Privacy Policy</a>
+          </div>
+        </section>
 
 
 
