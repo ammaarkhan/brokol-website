@@ -1,6 +1,9 @@
+'use client'
+
 import Head from "next/head";
 import TopBar from "../app/components/TopBar";
 import Image from "next/image";
+import { db, addDoc, collection } from "../app/firebase";
 import projectZeroLogo from "../app/images/projectzero.png";
 import eubcologo from "../app/images/eubco.png";
 import mitacslogo from "../app/images/mitacs.png";
@@ -17,7 +20,21 @@ import linkedin from "../app/images/linkedin.png";
 import tiktok from "../app/images/tiktok.png";
 import threads from "../app/images/threads.png";
 
+async function handleEmailSubmission(email) {
+  try {
+    await addDoc(collection(db, 'emails'), {
+      email: email,
+      timestamp: new Date().toISOString()
+    });
+  } catch (e) {
+    console.error('Error adding document: ', e);
+    alert('There was an error registering your email.');
+  }
+}
+
 export default function Home() {
+
+
   return (
     <div>
       <Head>
@@ -40,16 +57,24 @@ export default function Home() {
             Streamline Your Meals and Reduce Overwhelm with Our ADHD-Friendly
             Meal Planner
           </p>
-          <div className="flex justify-center mb-8">
+          <form onSubmit={async (e) => {
+              e.preventDefault();
+              const email = e.target.email.value; // Get the value from the form input
+              await handleEmailSubmission(email);
+              e.target.reset(); // Reset the form after submission
+            }} 
+            className="flex justify-center mb-8">
             <input
               type="email"
+              name="email"
               placeholder="Type your email ..."
               className="w-96 px-4 py-2 text-black rounded-l-lg focus:outline-none"
+              required
             />
-            <button className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
+            <button type="submit" className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
               Get Early Access
             </button>
-          </div>
+          </form>
           <div className="absolute inset-x-0 bottom-[-330px] z-10 flex justify-center">
             <iframe
               width="704"
@@ -325,7 +350,7 @@ export default function Home() {
                 <p className="text-lg mb-4">
                   “I love how easy it is to make quick changes, and how I can
                   keep updating it to fit my needs. For example, I was getting
-                  too many zucchini recipes, so I just adjusted it, and now it's
+                  too many zucchini recipes, so I just adjusted it, and now it&apos;s
                   perfect for me!”
                 </p>
                 <div className="flex items-center">
@@ -349,16 +374,24 @@ export default function Home() {
                 Join 70+ ADHDers as an early adopter to
                 <br /> reduce the overwhelm of meal planning.
               </h3>
-              <div className="flex justify-center my-8">
+              <form onSubmit={async (e) => {
+                  e.preventDefault();
+                  const email = e.target.email.value; // Get the value from the form input
+                  await handleEmailSubmission(email);
+                  e.target.reset(); // Reset the form after submission
+                }} 
+                className="flex justify-center my-8">
                 <input
                   type="email"
+                  name = "email"
                   placeholder="Type your email ..."
                   className="px-4 py-2 text-black rounded-l-lg border border-background-green focus:outline-none w-96"
+                  required
                 />
-                <button className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
+                <button type="submit" className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
                   Get Early Access
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </section>
