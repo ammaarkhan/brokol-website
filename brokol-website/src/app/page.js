@@ -3,6 +3,7 @@
 import Head from "next/head";
 import TopBar from "../app/components/TopBar";
 import Image from "next/image";
+import Link from "next/link";
 import { db, addDoc, collection } from "../app/firebase";
 import projectZeroLogo from "../app/images/projectzero.png";
 import eubcologo from "../app/images/eubco.png";
@@ -437,9 +438,9 @@ export default function Home() {
           </div>
           <div className="container mx-auto mt-8 border-t border-gray-700 pt-4 flex justify-center space-x-8 text-sm">
             <p>© 2024 BROKOL. All rights reserved.</p>
-            <a href="#" className="hover:underline">
-              About Us
-            </a>
+            <Link href="/about">
+              <span className="hover:underline">About Us</span>
+            </Link>
             <a
               href="https://www.termsfeed.com/live/3e404b75-36de-40c0-9b69-409c2c6d8b42"
               target="_blank"
