@@ -57,21 +57,26 @@ export default function Home() {
             Streamline Your Meals and Reduce Overwhelm with Our ADHD-Friendly
             Meal Planner
           </p>
-          <form onSubmit={async (e) => {
+          <form
+            onSubmit={async (e) => {
               e.preventDefault();
               const email = e.target.email.value; // Get the value from the form input
               await handleEmailSubmission(email);
               e.target.reset(); // Reset the form after submission
-            }} 
-            className="flex justify-center mb-8">
+            }}
+            className="flex flex-col md:flex-row justify-center items-center mb-8 space-y-4 md:space-y-0 md:space-x-0"
+          >
             <input
               type="email"
               name="email"
               placeholder="Type your email ..."
-              className="w-96 px-4 py-2 text-black rounded-l-lg focus:outline-none"
+              className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none focus:outline-none"
               required
             />
-            <button type="submit" className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
+            <button
+              type="submit"
+              className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
+            >
               Get Early Access
             </button>
           </form>
@@ -84,19 +89,20 @@ export default function Home() {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg w-full md:w-[704px] h-[230px] md:h-[396px]"
             ></iframe>
           </div>
         </section>
+
 
         <section
           id="supported-by"
           className="bg-white text-black py-16 mt-[150px]"
         >
-          <div className="container mx-auto text-center mt-[170px]">
+          <div className="container mx-auto text-center mt-[170px] px-4 sm:px-0">
             <h2 className="text-2xl font-bold mb-8">Supported by</h2>
-            <div className="flex justify-center space-x-20 mr-20">
-              <div className="mt-2 w-60 h-auto">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12 md:pr-20 sm:pr-20">
+              <div className="mt-2 w-40 sm:w-60 h-auto mx-1">
                 <Image
                   src={projectZeroLogo}
                   alt="Project Zero"
@@ -105,7 +111,7 @@ export default function Home() {
                   height={154}
                 />
               </div>
-              <div className="w-20 h-auto">
+              <div className="w-20 h-auto mx-auto">
                 <Image
                   src={eubcologo}
                   alt="eubco"
@@ -114,7 +120,7 @@ export default function Home() {
                   height={200}
                 />
               </div>
-              <div className="mt-6 w-40 h-auto">
+              <div className="mt-6 w-24 sm:w-40 h-auto mx-auto">
                 <Image
                   src={mitacslogo}
                   alt="mitacs"
@@ -127,15 +133,17 @@ export default function Home() {
           </div>
         </section>
 
+
+
         <section id="benefits" className="bg-white text-black py-8">
-          <div className="container mx-auto text-center max-w-4xl">
+          <div className="container mx-auto text-center max-w-4xl px-4 sm:px-0">
             <h2 className="text-3xl font-bold mb-8">
               Why Brokol Meal Planner? What benefits you get?
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 px-4">
-              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
-                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-8 px-4 sm:px-0">
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-auto w-full sm:w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-full mr-4 bg-white rounded-lg">
                   <Image
                     src={benefit1}
                     alt="Reduce Overwhelm"
@@ -144,17 +152,17 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
-                  <h3 className="pl-3 text-left text-xl font-semibold">
+                  <h3 className="pl-3 text-left text-lg sm:text-xl font-semibold">
                     Reduce Overwhelm
                   </h3>
-                  <p className="pl-3 text-left pr-3">
+                  <p className="pl-3 text-left pr-3 text-sm sm:text-base">
                     Effortlessly manage meal planning and stress with an
                     ADHD-friendly interface.
                   </p>
                 </div>
               </div>
-              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
-                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-auto w-full sm:w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-full mr-4 bg-white rounded-lg">
                   <Image
                     src={benefit2}
                     alt="Personalize Meals"
@@ -163,17 +171,17 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
-                  <h3 className="pl-3 text-left text-xl font-semibold">
+                  <h3 className="pl-3 text-left text-lg sm:text-xl font-semibold">
                     Personalize Meals
                   </h3>
-                  <p className="pl-3 text-left pr-3">
+                  <p className="pl-3 text-left pr-3 text-sm sm:text-base">
                     Quickly create meal plans with your favorite recipes to fit
                     your preferences.
                   </p>
                 </div>
               </div>
-              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
-                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-auto w-full sm:w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-full mr-4 bg-white rounded-lg">
                   <Image
                     src={benefit3}
                     alt="Shop Efficiently"
@@ -182,17 +190,17 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
-                  <h3 className="pl-3 text-left text-xl font-semibold">
+                  <h3 className="pl-3 text-left text-lg sm:text-xl font-semibold">
                     Shop Efficiently
                   </h3>
-                  <p className="pl-3 text-left pr-3">
+                  <p className="pl-3 text-left pr-3 text-sm sm:text-base">
                     Get categorized shopping lists for quick and easy grocery
                     trips.
                   </p>
                 </div>
               </div>
-              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-4 w-[400px] md:max-w-md">
-                <div className="flex items-center justify-center min-w-[110px] h-full mr-4 bg-white rounded-lg">
+              <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-auto w-full sm:w-[400px] md:max-w-md">
+                <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-full mr-4 bg-white rounded-lg">
                   <Image
                     src={benefit4}
                     alt="Simplify Cooking"
@@ -201,10 +209,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
-                  <h3 className="pl-3 text-left text-xl font-semibold">
+                  <h3 className="pl-3 text-left text-lg sm:text-xl font-semibold">
                     Simplify Cooking
                   </h3>
-                  <p className="pl-3 text-left pr-3">
+                  <p className="pl-3 text-left pr-3 text-sm sm:text-base">
                     Create easy recipes that make cooking enjoyable and
                     stress-free.
                   </p>
@@ -214,24 +222,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="how-it-works"
-          className="bg-background-green text-white py-16"
-        >
-          <div className="container mx-auto  max-w-3xl">
+
+        <section id="how-it-works" className="bg-background-green text-white py-16">
+          <div className="container mx-auto max-w-3xl">
             <h2 className="text-3xl mb-8 text-left pl-10">
               BROKOL lets you create your personalized meal plan effortlessly.{" "}
               <span className="font-bold">It just takes 3 simple steps!</span>
             </h2>
             <div className="space-y-8">
-              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
+              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green py-3">
                 <div className="md:w-1/2 text-left pl-16 pr-28">
-                  <span className="text-white text-2xl font-bold">
-                    ( 1 )<br />
-                  </span>
-                  <span className="text-white text-lg font-normal">
-                    <br />
-                  </span>
+                  <span className="text-white text-2xl font-bold">( 1 )<br /></span>
+                  <span className="text-white text-lg font-normal"><br /></span>
                   <span className="text-white text-lg font-bold">
                     Fill in your preferences{" "}
                   </span>
@@ -242,19 +244,15 @@ export default function Home() {
                     Include any favorite recipes you might have.
                   </span>
                 </div>
-
-                <div className="md:w-1/2 mt-4 mr-3">
+                <div className="md:w-1/2 mt-4 md:mt-0 mr-3">
                   <Image src={step1} alt="Step 1" />
                 </div>
               </div>
+
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-24 py-3">
-                  <span className="text-white text-2xl font-bold">
-                    ( 2 )<br />
-                  </span>
-                  <span className="text-white text-lg font-normal">
-                    <br />
-                  </span>
+                  <span className="text-white text-2xl font-bold">( 2 )<br /></span>
+                  <span className="text-white text-lg font-normal"><br /></span>
                   <span className="text-white text-lg font-bold">
                     Generate your personalized meal plan. <br />
                     <br />{" "}
@@ -267,18 +265,15 @@ export default function Home() {
                     <br /> your favorite(s)!
                   </span>
                 </div>
-                <div className="md:w-1/2  mt-8 mr-4">
+                <div className="md:w-1/2 mt-8 md:mt-0 mr-4">
                   <Image src={step2} alt="Step 2" />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg  bg-background-green">
+
+              <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-20">
-                  <span className="text-white text-2xl font-bold">
-                    ( 3 )<br />
-                  </span>
-                  <span className="text-white text-lg font-normal">
-                    <br />
-                  </span>
+                  <span className="text-white text-2xl font-bold">( 3 )<br /></span>
+                  <span className="text-white text-lg font-normal"><br /></span>
                   <span className="text-white text-lg font-bold">
                     Get your meal plan and categorized shopping list.
                   </span>
@@ -288,11 +283,11 @@ export default function Home() {
                     Done!
                   </span>
                 </div>
-                <div className="md:w-1/2 flex justify-center items-center">
+                <div className="md:w-1/2 flex justify-center items-center mt-10 md:mt-10 mr-10 md:mr-10">
                   <Image
                     src={step3}
                     alt="Step 3"
-                    className="rounded-t-lg shadow-lg mt-10 mr-10 object-cover"
+                    className="rounded-t-lg shadow-lg object-cover"
                     style={{
                       borderBottomLeftRadius: "0",
                       borderBottomRightRadius: "0",
@@ -305,6 +300,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
 
         <section id="testimonials" className="bg-white text-black py-16">
           <div className="container mx-auto text-left max-w-4xl">
