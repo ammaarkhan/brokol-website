@@ -226,16 +226,16 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-28">
-                  <span className="text-white text-2xl font-bold font-['Inter']">
+                  <span className="text-white text-2xl font-bold">
                     ( 1 )<br />
                   </span>
-                  <span className="text-white text-lg font-normal font-['Inter']">
+                  <span className="text-white text-lg font-normal">
                     <br />
                   </span>
-                  <span className="text-white text-lg font-bold font-['Inter']">
+                  <span className="text-white text-lg font-bold">
                     Fill in your preferences{" "}
                   </span>
-                  <span className="text-white text-lg font-normal font-['Inter']">
+                  <span className="text-white text-lg font-normal">
                     such as number of meals, dietary restrictions, and others.
                     <br />
                     <br />
@@ -249,17 +249,17 @@ export default function Home() {
               </div>
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-24 py-3">
-                  <span className="text-white text-2xl font-bold font-['Inter']">
+                  <span className="text-white text-2xl font-bold">
                     ( 2 )<br />
                   </span>
-                  <span className="text-white text-lg font-normal font-['Inter']">
+                  <span className="text-white text-lg font-normal">
                     <br />
                   </span>
-                  <span className="text-white text-lg font-bold font-['Inter']">
+                  <span className="text-white text-lg font-bold">
                     Generate your personalized meal plan. <br />
                     <br />{" "}
                   </span>
-                  <span className="text-white text-lg font-normal font-['Inter']">
+                  <span className="text-white text-lg font-normal">
                     Customize by deleting or adjusting meals.
                     <br />
                     <br />
@@ -273,16 +273,16 @@ export default function Home() {
               </div>
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg  bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-20">
-                  <span className="text-white text-2xl font-bold font-['Inter']">
+                  <span className="text-white text-2xl font-bold">
                     ( 3 )<br />
                   </span>
-                  <span className="text-white text-lg font-normal font-['Inter']">
+                  <span className="text-white text-lg font-normal">
                     <br />
                   </span>
-                  <span className="text-white text-lg font-bold font-['Inter']">
+                  <span className="text-white text-lg font-bold">
                     Get your meal plan and categorized shopping list.
                   </span>
-                  <span className="text-white text-lg font-normal font-['Inter']">
+                  <span className="text-white text-lg font-normal">
                     <br />
                     <br />
                     Done!
