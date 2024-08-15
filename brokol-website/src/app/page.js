@@ -366,29 +366,35 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 text-center bg-white border border-background-green border-2 rounded-lg p-8 shadow-md mx-4">
-              <h3 className="text-3xl font-semibold my-4">
+              <h3 className="text-2xl md:text-3xl font-semibold my-4">
                 Join 70+ ADHDers as an early adopter to
                 <br /> reduce the overwhelm of meal planning.
               </h3>
-              <form onSubmit={async (e) => {
+              <form 
+                onSubmit={async (e) => {
                   e.preventDefault();
                   const email = e.target.email.value; // Get the value from the form input
                   await handleEmailSubmission(email);
                   e.target.reset(); // Reset the form after submission
                 }} 
-                className="flex justify-center my-8">
+                className="flex flex-col md:flex-row justify-center items-center my-8 space-y-4 md:space-y-0 md:space-x-0"
+              >
                 <input
                   type="email"
-                  name = "email"
+                  name="email"
                   placeholder="Type your email ..."
-                  className="px-4 py-2 text-black rounded-l-lg border border-background-green focus:outline-none w-96"
+                  className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none border border-background-green focus:outline-none"
                   required
                 />
-                <button type="submit" className="px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-r-lg">
+                <button 
+                  type="submit" 
+                  className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
+                >
                   Get Early Access
                 </button>
               </form>
             </div>
+
           </div>
         </section>
 
