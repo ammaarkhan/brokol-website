@@ -1,10 +1,11 @@
-'use client'
+"use client";
 
 import Head from "next/head";
 import TopBar from "../app/components/TopBar";
 import Image from "next/image";
 import Link from "next/link";
-import { db, addDoc, collection } from "../app/firebase";
+import { db } from "../app/firebase";
+import { collection, addDoc } from "firebase/firestore";
 import projectZeroLogo from "../app/images/projectzero.png";
 import eubcologo from "../app/images/eubco.png";
 import mitacslogo from "../app/images/mitacs.png";
@@ -23,19 +24,17 @@ import threads from "../app/images/threads.png";
 
 async function handleEmailSubmission(email) {
   try {
-    await addDoc(collection(db, 'emails'), {
+    await addDoc(collection(db, "emails"), {
       email: email,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
   } catch (e) {
-    console.error('Error adding document: ', e);
-    alert('There was an error registering your email.');
+    console.error("Error adding document: ", e);
+    alert("There was an error registering your email.");
   }
 }
 
 export default function Home() {
-
-
   return (
     <div>
       <Head>
@@ -88,12 +87,10 @@ export default function Home() {
               src="https://www.youtube.com/embed/0tm_YvOIQAk?si=X_-kBOnKLQKhGfjU" // Replace with actual video URL
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              
               className="rounded-lg shadow-lg w-full md:w-[704px] h-[230px] md:h-[396px]"
             ></iframe>
           </div>
         </section>
-
 
         <section
           id="supported-by"
@@ -111,26 +108,14 @@ export default function Home() {
                 />
               </div>
               <div className="w-20 h-auto mx-auto">
-                <Image
-                  src={eubcologo}
-                  alt="eubco"
-                  width={200}
-                  height={200}
-                />
+                <Image src={eubcologo} alt="eubco" width={200} height={200} />
               </div>
               <div className="mt-6 w-24 sm:w-40 h-auto mx-auto">
-                <Image
-                  src={mitacslogo}
-                  alt="mitacs"
-                  width={200}
-                  height={200}
-                />
+                <Image src={mitacslogo} alt="mitacs" width={200} height={200} />
               </div>
             </div>
           </div>
         </section>
-
-
 
         <section id="benefits" className="bg-white text-black py-8">
           <div className="container mx-auto text-center max-w-4xl px-4 sm:px-0">
@@ -219,8 +204,10 @@ export default function Home() {
           </div>
         </section>
 
-
-        <section id="how-it-works" className="bg-background-green text-white py-16">
+        <section
+          id="how-it-works"
+          className="bg-background-green text-white py-16"
+        >
           <div className="container mx-auto max-w-3xl">
             <h2 className="text-3xl mb-8 text-left pl-10">
               BROKOL lets you create your personalized meal plan effortlessly.{" "}
@@ -229,8 +216,12 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green py-3">
                 <div className="md:w-1/2 text-left pl-16 pr-28">
-                  <span className="text-white text-2xl font-bold">( 1 )<br /></span>
-                  <span className="text-white text-lg font-normal"><br /></span>
+                  <span className="text-white text-2xl font-bold">
+                    ( 1 )<br />
+                  </span>
+                  <span className="text-white text-lg font-normal">
+                    <br />
+                  </span>
                   <span className="text-white text-lg font-bold">
                     Fill in your preferences{" "}
                   </span>
@@ -248,8 +239,12 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-24 py-3">
-                  <span className="text-white text-2xl font-bold">( 2 )<br /></span>
-                  <span className="text-white text-lg font-normal"><br /></span>
+                  <span className="text-white text-2xl font-bold">
+                    ( 2 )<br />
+                  </span>
+                  <span className="text-white text-lg font-normal">
+                    <br />
+                  </span>
                   <span className="text-white text-lg font-bold">
                     Generate your personalized meal plan. <br />
                     <br />{" "}
@@ -269,8 +264,12 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
                 <div className="md:w-1/2 text-left pl-16 pr-20">
-                  <span className="text-white text-2xl font-bold">( 3 )<br /></span>
-                  <span className="text-white text-lg font-normal"><br /></span>
+                  <span className="text-white text-2xl font-bold">
+                    ( 3 )<br />
+                  </span>
+                  <span className="text-white text-lg font-normal">
+                    <br />
+                  </span>
                   <span className="text-white text-lg font-bold">
                     Get your meal plan and categorized shopping list.
                   </span>
@@ -297,7 +296,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         <section id="testimonials" className="bg-white text-black py-16">
           <div className="container mx-auto text-left max-w-4xl">
@@ -343,8 +341,8 @@ export default function Home() {
                 <p className="text-lg mb-4">
                   “I love how easy it is to make quick changes, and how I can
                   keep updating it to fit my needs. For example, I was getting
-                  too many zucchini recipes, so I just adjusted it, and now it&apos;s
-                  perfect for me!”
+                  too many zucchini recipes, so I just adjusted it, and now
+                  it&apos;s perfect for me!”
                 </p>
                 <div className="flex items-center">
                   <Image
@@ -367,13 +365,13 @@ export default function Home() {
                 Join 70+ ADHDers as an early adopter to
                 <br /> reduce the overwhelm of meal planning.
               </h3>
-              <form 
+              <form
                 onSubmit={async (e) => {
                   e.preventDefault();
                   const email = e.target.email.value; // Get the value from the form input
                   await handleEmailSubmission(email);
                   e.target.reset(); // Reset the form after submission
-                }} 
+                }}
                 className="flex flex-col md:flex-row justify-center items-center my-8 space-y-4 md:space-y-0 md:space-x-0"
               >
                 <input
@@ -383,15 +381,14 @@ export default function Home() {
                   className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none border border-background-green focus:outline-none"
                   required
                 />
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
                 >
                   Get Early Access
                 </button>
               </form>
             </div>
-
           </div>
         </section>
 
