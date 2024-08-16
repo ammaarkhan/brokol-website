@@ -87,9 +87,8 @@ export default function Home() {
               height="396"
               src="https://www.youtube.com/embed/0tm_YvOIQAk?si=X_-kBOnKLQKhGfjU" // Replace with actual video URL
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              
               className="rounded-lg shadow-lg w-full md:w-[704px] h-[230px] md:h-[396px]"
             ></iframe>
           </div>
@@ -107,7 +106,6 @@ export default function Home() {
                 <Image
                   src={projectZeroLogo}
                   alt="Project Zero"
-                  layout="responsive"
                   width={610}
                   height={154}
                 />
@@ -116,7 +114,6 @@ export default function Home() {
                 <Image
                   src={eubcologo}
                   alt="eubco"
-                  layout="responsive"
                   width={200}
                   height={200}
                 />
@@ -125,7 +122,6 @@ export default function Home() {
                 <Image
                   src={mitacslogo}
                   alt="mitacs"
-                  layout="responsive"
                   width={200}
                   height={200}
                 />
