@@ -300,7 +300,7 @@ export default function Home() {
         <section id="testimonials" className="bg-white text-black py-16">
           <div className="container mx-auto text-left max-w-4xl">
             <h2 className="text-3xl font-normal mb-8 px-5">
-              Don't just take our words.{" "}
+              Don&apos;t just take our words.{" "}
               <span className="font-bold">
                 Read what people with ADHD say about our meal planner.
               </span>
