@@ -80,7 +80,9 @@ export default function Home() {
               Get Early Access
             </button>
           </form>
-          <div className="absolute inset-x-0 bottom-[-330px] z-10 flex justify-center">
+
+          {/* Added more margin-bottom to create extra space */}
+          <div className="absolute inset-x-0 bottom-[-350px] z-10 flex justify-center mt-8">
             <iframe
               width="704"
               height="396"
@@ -91,6 +93,7 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
+
 
         <section
           id="supported-by"

@@ -11,7 +11,9 @@ const TopBar = () => {
   return (
     <div className="bg-background-green fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="text-brokol-green font-bold text-xl">BROKOL</div>
+        <div className="text-brokol-green font-bold text-xl">
+          <Link href="#">BROKOL</Link>
+        </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-brokol-green focus:outline-none">
             {isOpen ? (
