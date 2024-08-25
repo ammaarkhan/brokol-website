@@ -9,7 +9,7 @@ export default function About() {
     <div className="bg-white min-h-screen">
       <Head>
         <title>About Us - BROKOL</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
 
       <TopBar />
