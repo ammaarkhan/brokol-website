@@ -121,7 +121,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="benefits" className="bg-white text-black py-8">
+        <section id="benefits" className="bg-white text-black pt-4 pb-20">
           <div className="container mx-auto text-center max-w-4xl px-4 sm:px-0">
             <h2 className="text-3xl font-bold mb-8">
               Why Brokol Meal Planner? What benefits you get?
