@@ -88,8 +88,9 @@ export default function Home() {
               height="396"
               src="https://www.youtube.com/embed/0tm_YvOIQAk?si=X_-kBOnKLQKhGfjU" // Replace with actual video URL
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               className="rounded-lg shadow-lg w-full md:w-[704px] h-[230px] md:h-[396px]"
+              allowfullScreen
             ></iframe>
           </div>
         </section>
