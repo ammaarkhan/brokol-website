@@ -402,20 +402,20 @@ export default function Home() {
                 BROKOL
               </h3>
               <div className="flex space-x-4">
-                <a href="#" aria-label="Instagram">
+                <a href="https://www.instagram.com/brokol.app/" aria-label="Instagram">
                   <Image
                     src={instagram}
                     alt="Instagram"
                     className="w-8 h-8 mt-1"
                   />
                 </a>
-                <a href="#" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/brokol/" aria-label="LinkedIn">
                   <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
                 </a>
-                <a href="#" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@brokol.planner" aria-label="TikTok">
                   <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
                 </a>
-                <a href="#" aria-label="Threads">
+                <a href="https://www.threads.net/@brokol.app?hl=en" aria-label="Threads">
                   <Image src={threads} alt="Threads" className="w-8 h-8" />
                 </a>
               </div>
