@@ -38,8 +38,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>BROKOL Website</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>BROKOL Planner</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
 
       <TopBar />
