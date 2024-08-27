@@ -47,13 +47,13 @@ export default function Home() {
       <main className="bg-background-green text-white">
         <section
           id="demo"
-          className="relative min-h-[50vh] flex flex-col items-center justify-center text-center px-4"
+          className="relative md:min-h-[50vh] flex flex-col items-center justify-center text-center px-4"
         >
-          <h1 className="text-4xl font-bold mb-4 mt-20">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 mt-28 md:mt-20">
             Simplified Meal Planning for{" "}
             <span className="text-brokol-green">ADHD</span>
           </h1>
-          <p className="text-xl mb-8">
+          <p className="text-base sm:text-lg md:text-xl mb-8">
             Streamline Your Meals and Reduce Overwhelm with Our ADHD-Friendly
             Meal Planner
           </p>
@@ -64,7 +64,7 @@ export default function Home() {
               await handleEmailSubmission(email);
               e.target.reset(); // Reset the form after submission
             }}
-            className="flex flex-col md:flex-row justify-center items-center mb-8 space-y-4 md:space-y-0 md:space-x-0"
+            className="flex flex-col md:flex-row justify-center items-center mb-0 md:mb-8 space-y-4 md:space-y-0 md:space-x-0"
           >
             <input
               type="email"
@@ -82,8 +82,8 @@ export default function Home() {
           </form>
 
           {/* Added more margin-bottom to create extra space */}
-          <div className="absolute inset-x-0 bottom-[-350px] z-10 flex justify-center mt-8">
-            <div className="w-full max-w-[90%] md:max-w-[704px] h-auto">
+          <div className="absolute inset-x-0 bottom-[-250px] md:bottom-[-350px] z-10 flex justify-center mt-8 px-4 md:px-0">
+            <div className="w-full max-w-[90%] md:max-w-[704px]">
               <iframe
                 width="100%"
                 height="auto"
@@ -96,6 +96,8 @@ export default function Home() {
             </div>
           </div>
 
+
+
         </section>
 
 
@@ -103,7 +105,7 @@ export default function Home() {
           id="supported-by"
           className="bg-white text-black py-16 mt-[150px]"
         >
-          <div className="container mx-auto text-center mt-[170px] px-4 sm:px-0">
+          <div className="container mx-auto text-center mt-[100px] md:mt-[170px] px-4 sm:px-0">
             <h2 className="text-2xl font-bold mb-8">Supported by</h2>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12 md:pr-20 sm:pr-20">
               <div className="mt-2 w-40 sm:w-60 h-auto mx-1">
@@ -126,19 +128,18 @@ export default function Home() {
 
         <section id="benefits" className="bg-white text-black pt-4 pb-20">
           <div className="container mx-auto text-center max-w-4xl px-4 sm:px-0">
-            <h2 className="text-3xl font-bold mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">
               Why Brokol Meal Planner? What benefits you get?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-8 px-4 sm:px-0">
               <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-auto w-full sm:w-[400px] md:max-w-md">
-                <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-full mr-4 bg-white rounded-lg">
-                  <Image
-                    src={benefit1}
-                    alt="Reduce Overwhelm"
-                    width={90}
-                    height={90}
-                  />
+                <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] min-h-[90px] sm:min-h-[110px] mr-4 bg-white rounded-lg">
+                <Image
+                  src={benefit1}
+                  alt="Reduce Overwhelm"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+                />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
                   <h3 className="pl-3 text-left text-lg sm:text-xl font-semibold">
@@ -155,8 +156,7 @@ export default function Home() {
                   <Image
                     src={benefit2}
                     alt="Personalize Meals"
-                    width={90}
-                    height={90}
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
@@ -174,8 +174,7 @@ export default function Home() {
                   <Image
                     src={benefit3}
                     alt="Shop Efficiently"
-                    width={90}
-                    height={90}
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
@@ -193,8 +192,7 @@ export default function Home() {
                   <Image
                     src={benefit4}
                     alt="Simplify Cooking"
-                    width={90}
-                    height={90}
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
@@ -215,14 +213,14 @@ export default function Home() {
           id="how-it-works"
           className="bg-background-green text-white py-16"
         >
-          <div className="container mx-auto max-w-3xl">
-            <h2 className="text-3xl mb-8 text-left pl-10">
+          <div className="container mx-auto max-w-3xl px-6 md:px-0">
+            <h2 className="text-2xl md:text-3xl mb-8 text-left pl-3 md:pl-10">
               BROKOL lets you create your personalized meal plan effortlessly.{" "}
               <span className="font-bold">It just takes 3 simple steps!</span>
             </h2>
-            <div className="space-y-8">
+            <div className="space-y-8 ">
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green py-3">
-                <div className="md:w-1/2 text-left pl-16 pr-28">
+                <div className="md:w-1/2 text-left px-10 md:pl-16 md:pr-28 py-3">
                   <span className="text-white text-2xl font-bold">
                     ( 1 )<br />
                   </span>
@@ -239,13 +237,13 @@ export default function Home() {
                     Include any favorite recipes you might have.
                   </span>
                 </div>
-                <div className="md:w-1/2 mt-4 md:mt-0 mr-3">
+                <div className="md:w-1/2 mt-4 md:mt-0 mx-4 md:mr-3">
                   <Image src={step1} alt="Step 1" />
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
-                <div className="md:w-1/2 text-left pl-16 pr-24 py-3">
+                <div className="md:w-1/2 text-left px-10 md:pl-16 md:pr-28 py-3">
                   <span className="text-white text-2xl font-bold">
                     ( 2 )<br />
                   </span>
@@ -264,13 +262,13 @@ export default function Home() {
                     <br /> your favorite(s)!
                   </span>
                 </div>
-                <div className="md:w-1/2 mt-8 md:mt-0 mr-4">
+                <div className="md:w-1/2 mt-8 md:mt-0 mx-4 md:mr-4">
                   <Image src={step2} alt="Step 2" />
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row items-center border border-white rounded-lg bg-background-green">
-                <div className="md:w-1/2 text-left pl-16 pr-20">
+                <div className="md:w-1/2 text-left px-10 md:pl-16 md:pr-28 py-3">
                   <span className="text-white text-2xl font-bold">
                     ( 3 )<br />
                   </span>
@@ -286,18 +284,12 @@ export default function Home() {
                     Done!
                   </span>
                 </div>
-                <div className="md:w-1/2 flex justify-center items-center mt-10 md:mt-10 mr-10 md:mr-10">
-                  <Image
-                    src={step3}
-                    alt="Step 3"
-                    className="rounded-t-lg shadow-lg object-cover"
-                    style={{
-                      borderBottomLeftRadius: "0",
-                      borderBottomRightRadius: "0",
-                      height: "70%",
-                      width: "70%",
-                    }}
-                  />
+                <div className="md:w-1/2 flex justify-center items-center mx-10 md:mt-10 md:mr-10">
+                <Image
+                  src={step3}
+                  alt="Step 3"
+                  className="rounded-t-lg shadow-lg object-cover  md:w-4/5"
+                />
                 </div>
               </div>
             </div>
@@ -306,7 +298,7 @@ export default function Home() {
 
         <section id="testimonials" className="bg-white text-black py-16">
           <div className="container mx-auto text-left max-w-4xl">
-            <h2 className="text-3xl font-normal mb-8 px-5">
+            <h2 className="text-2xl md:text-3xl font-normal mb-8 px-5">
               Don&apos;t just take our words.{" "}
               <span className="font-bold">
                 Read what people with ADHD say about our meal planner.
