@@ -322,16 +322,9 @@ export default function Home() {
                   groceries I need to buy.”
                 </p>
                 <div className="flex items-center">
-                  <Image
-                    src={user1}
-                    alt="Nicole's Avatar"
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                  />
-                  <div className="ml-4 text-left">
+                  <div className="text-left">
                     <p className="text-sm font-semibold">
-                      Nicole (20s), living with her partner
+                      - Nicole (20s), living with her partner
                     </p>
                   </div>
                 </div>
@@ -349,16 +342,9 @@ export default function Home() {
                   it&apos;s perfect for me!”
                 </p>
                 <div className="flex items-center">
-                  <Image
-                    src={user1}
-                    alt="Laura's Avatar"
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                  />
-                  <div className="ml-4 text-left">
+                  <div className="text-left">
                     <p className="text-sm font-semibold">
-                      Laura (50s), living alone
+                      - Laura (50s), living alone
                     </p>
                   </div>
                 </div>
