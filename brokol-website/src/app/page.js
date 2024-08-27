@@ -83,16 +83,19 @@ export default function Home() {
 
           {/* Added more margin-bottom to create extra space */}
           <div className="absolute inset-x-0 bottom-[-350px] z-10 flex justify-center mt-8">
-            <iframe
-              width="704"
-              height="396"
-              src="https://www.youtube.com/embed/0tm_YvOIQAk?si=X_-kBOnKLQKhGfjU" // Replace with actual video URL
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              className="rounded-lg shadow-lg w-full md:w-[704px] h-[230px] md:h-[396px]"
-              allowfullScreen
-            ></iframe>
+            <div className="w-full max-w-[90%] md:max-w-[704px] h-auto">
+              <iframe
+                width="100%"
+                height="auto"
+                src="https://www.youtube.com/embed/0tm_YvOIQAk?si=X_-kBOnKLQKhGfjU" // Replace with actual video URL
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                className="rounded-lg shadow-lg aspect-video"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
+
         </section>
 
 
