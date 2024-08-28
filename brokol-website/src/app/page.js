@@ -90,7 +90,7 @@ export default function Home() {
                 src="https://www.youtube.com/embed/0tm_YvOIQAk?si=X_-kBOnKLQKhGfjU" // Replace with actual video URL
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                className="rounded-lg shadow-lg aspect-video"
+                className="rounded-lg aspect-video"
                 allowFullScreen
               ></iframe>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="benefits" className="bg-white text-black pt-4 pb-20">
+        <section id="benefits" className="scroll-offset bg-white text-black pt-4 pb-20">
           <div className="container mx-auto text-center max-w-4xl px-4 sm:px-0">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">
               Why Brokol Meal Planner? What benefits you get?
@@ -211,7 +211,7 @@ export default function Home() {
 
         <section
           id="how-it-works"
-          className="bg-background-green text-white py-16"
+          className="scroll-offset bg-background-green text-white py-16"
         >
           <div className="container mx-auto max-w-3xl px-6 md:px-0">
             <h2 className="text-2xl md:text-3xl mb-8 text-left pl-3 md:pl-10">
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="bg-white text-black py-16">
+        <section id="testimonials" className="scroll-offset bg-white text-black py-16">
           <div className="container mx-auto text-left max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-normal mb-8 px-5">
               Don&apos;t just take our words.{" "}
