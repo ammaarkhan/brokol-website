@@ -45,11 +45,11 @@ const TopBar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-background-green">
-          <Link href="#demo" className="block text-white px-4 py-2 hover:bg-gray-700" onClick={closeMenu}>Demo</Link>
-          <Link href="#benefits" className="block text-white px-4 py-2 hover:bg-gray-700" onClick={closeMenu}>Benefits</Link>
-          <Link href="#how-it-works" className="block text-white px-4 py-2 hover:bg-gray-700" onClick={closeMenu}>How It Works</Link>
-          <Link href="#testimonials" className="block text-white px-4 py-2 hover:bg-gray-700" onClick={closeMenu}>Testimonials</Link>
-          <Link href="#get-early-access" className="block text-white px-4 py-2 bg-brokol-green hover:bg-gray-700 rounded-lg" onClick={closeMenu}>Get Early Access</Link>
+          <Link href="#demo" className="block text-white px-8 py-2 hover:bg-gray-700" onClick={closeMenu}>Demo</Link>
+          <Link href="#benefits" className="block text-white px-8 py-2 hover:bg-gray-700" onClick={closeMenu}>Benefits</Link>
+          <Link href="#how-it-works" className="block text-white px-8 py-2 hover:bg-gray-700" onClick={closeMenu}>How It Works</Link>
+          <Link href="#testimonials" className="block text-white px-8 py-2 hover:bg-gray-700" onClick={closeMenu}>Testimonials</Link>
+          <Link href="#get-early-access" className="block text-white pl-4 py-2 bg-brokol-green hover:bg-gray-700 rounded-lg w-[45%] mx-8 mb-4 mt-2" onClick={closeMenu}>Get Early Access</Link>
         </div>
       )}
     </div>

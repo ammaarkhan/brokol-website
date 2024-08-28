@@ -379,16 +379,24 @@ export default function Home() {
 
         <section id="footer" className="bg-background-green text-white py-8">
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col items-center md:items-start">
-              <h3 className="text-4xl font-black mb-4 text-brokol-green">
-                BROKOL
-              </h3>
+            {/* For Mobile View */}
+            <div className="flex flex-col md:hidden items-start space-y-6">
+              <h3 className="text-4xl font-black text-brokol-green">BROKOL</h3>
+              <div>
+                <p className="py-1">Have any questions?</p>
+                <p>
+                  Contact us at{" "}
+                  <a href="mailto:hello@brokol.app" className="underline">
+                    hello@brokol.app
+                  </a>
+                </p>
+              </div>
               <div className="flex space-x-4">
                 <a href="https://www.instagram.com/brokol.app/" aria-label="Instagram">
                   <Image
                     src={instagram}
                     alt="Instagram"
-                    className="w-8 h-8 mt-1"
+                    className="w-8 h-8"
                   />
                 </a>
                 <a href="https://www.linkedin.com/company/brokol/" aria-label="LinkedIn">
@@ -401,20 +409,67 @@ export default function Home() {
                   <Image src={threads} alt="Threads" className="w-8 h-8" />
                 </a>
               </div>
-            </div>
-            <div className="mt-8 md:mt-0">
-              <p className="text-center md:text-right py-1">
-                Have any questions?
-              </p>
-              <p className="text-center md:text-right">
-                Contact us at{" "}
-                <a href="mailto:hello@brokol.app" className="underline">
-                  hello@brokol.app
+              <div className="flex flex-col space-y-2">
+                <Link href="/about">
+                  <span className="hover:underline">About Us</span>
+                </Link>
+                <a
+                  href="https://www.termsfeed.com/live/3e404b75-36de-40c0-9b69-409c2c6d8b42"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  Terms & Conditions
                 </a>
-              </p>
+                <a
+                  href="https://www.termsfeed.com/live/07ace726-7690-4cf3-910f-1cb3fd1e590c"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  Privacy Policy
+                </a>
+                <p>© 2024 BROKOL. All rights reserved.</p>
+              </div>
+            </div>
+
+            {/* For Desktop View */}
+            <div className="hidden md:flex flex-col md:flex-row justify-between items-center w-full">
+              <div className="flex flex-col items-center md:items-start">
+                <h3 className="text-4xl font-black mb-4 text-brokol-green">
+                  BROKOL
+                </h3>
+                <div className="flex space-x-4">
+                  <a href="https://www.instagram.com/brokol.app/" aria-label="Instagram">
+                    <Image
+                      src={instagram}
+                      alt="Instagram"
+                      className="w-8 h-8 mt-1"
+                    />
+                  </a>
+                  <a href="https://www.linkedin.com/company/brokol/" aria-label="LinkedIn">
+                    <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
+                  </a>
+                  <a href="https://www.tiktok.com/@brokol.planner" aria-label="TikTok">
+                    <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
+                  </a>
+                  <a href="https://www.threads.net/@brokol.app?hl=en" aria-label="Threads">
+                    <Image src={threads} alt="Threads" className="w-8 h-8" />
+                  </a>
+                </div>
+              </div>
+              <div className="mt-8 md:mt-0">
+                <p className="text-center md:text-right py-1">
+                  Have any questions?
+                </p>
+                <p className="text-center md:text-right">
+                  Contact us at{" "}
+                  <a href="mailto:hello@brokol.app" className="underline">
+                    hello@brokol.app
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-          <div className="container mx-auto mt-8 border-t border-gray-700 pt-4 flex justify-center space-x-8 text-sm">
+          <div className="hidden md:flex container mx-auto mt-8 border-t border-gray-700 pt-4 justify-center space-x-8 text-sm">
             <p>© 2024 BROKOL. All rights reserved.</p>
             <Link href="/about">
               <span className="hover:underline">About Us</span>
@@ -435,6 +490,7 @@ export default function Home() {
             </a>
           </div>
         </section>
+
 
         {/* Add more sections here */}
       </main>
