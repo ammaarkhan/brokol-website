@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import { useState } from "react";
 import TopBar from "../app/components/TopBar";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,6 +36,9 @@ async function handleEmailSubmission(email) {
 }
 
 export default function Home() {
+  const [messageTop, setMessageTop] = useState("");
+  const [messageBottom, setMessageBottom] = useState("");
+
   return (
     <div>
       <Head>
@@ -57,29 +61,38 @@ export default function Home() {
             Streamline Your Meals and Reduce Overwhelm with Our ADHD-Friendly
             Meal Planner
           </p>
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const email = e.target.email.value; // Get the value from the form input
-              await handleEmailSubmission(email);
-              e.target.reset(); // Reset the form after submission
-            }}
-            className="flex flex-col md:flex-row justify-center items-center mb-0 md:mb-8 space-y-4 md:space-y-0 md:space-x-0"
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="Type your email ..."
-              className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none focus:outline-none"
-              required
-            />
-            <button
-              type="submit"
-              className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
+          <div>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const email = e.target.email.value; // Get the value from the form input
+                await handleEmailSubmission(email);
+                e.target.reset(); // Reset the form after submission
+
+                // Set the confirmation message
+                setMessageTop(
+                  `We will reach out to your email ${email} within 24 hours :)`
+                );
+              }}
+              className="flex flex-col md:flex-row justify-center items-center mb-0 md:mb-8 space-y-4 md:space-y-0 md:space-x-0"
             >
-              Get Early Access
-            </button>
-          </form>
+              <input
+                type="email"
+                name="email"
+                placeholder="Type your email ..."
+                className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none focus:outline-none"
+                required
+              />
+              <button
+                type="submit"
+                className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
+              >
+                Get Early Access
+              </button>
+            </form>
+            {/* Display the message if it's set */}
+            {messageTop && <p className="text-center text-600">{messageTop}</p>}
+          </div>
 
           {/* Added more margin-bottom to create extra space */}
           <div className="absolute inset-x-0 bottom-[-250px] md:bottom-[-350px] z-10 flex justify-center mt-8 px-4 md:px-0">
@@ -352,29 +365,41 @@ export default function Home() {
                 Join 70+ ADHDers as an early adopter to
                 <br /> reduce the overwhelm of meal planning.
               </h3>
-              <form
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const email = e.target.email.value; // Get the value from the form input
-                  await handleEmailSubmission(email);
-                  e.target.reset(); // Reset the form after submission
-                }}
-                className="flex flex-col md:flex-row justify-center items-center my-8 space-y-4 md:space-y-0 md:space-x-0"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Type your email ..."
-                  className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none border border-background-green focus:outline-none"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
+              <div>
+                <form
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const email = e.target.email.value; // Get the value from the form input
+                    await handleEmailSubmission(email);
+                    e.target.reset(); // Reset the form after submission
+
+                    // Set the confirmation message
+                    setMessageBottom(
+                      `We will reach out to your email ${email} within 24 hours :)`
+                    );
+                  }}
+                  className="flex flex-col md:flex-row justify-center items-center my-8 space-y-4 md:space-y-0 md:space-x-0"
                 >
-                  Get Early Access
-                </button>
-              </form>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Type your email ..."
+                    className="w-11/12 md:w-96 px-4 py-2 text-black rounded-lg md:rounded-l-lg md:rounded-r-none border border-background-green focus:outline-none"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
+                  >
+                    Get Early Access
+                  </button>
+                </form>
+
+                {/* Display the message if it's set */}
+                {messageBottom && (
+                  <p className="text-center text-600">{messageBottom}</p>
+                )}
+              </div>
             </div>
           </div>
         </section>
