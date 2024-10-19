@@ -449,7 +449,7 @@ export default function Home() {
                 </h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://www.instagram.com/brokol.app/"
+                    href="https://www.instagram.com/brokol.planner/"
                     aria-label="Instagram"
                   >
                     <Image
@@ -471,7 +471,7 @@ export default function Home() {
                     <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
                   </a>
                   <a
-                    href="https://www.threads.net/@brokol.app?hl=en"
+                    href="https://www.threads.net/@brokol.planner?hl=en"
                     aria-label="Threads"
                   >
                     <Image src={threads} alt="Threads" className="w-8 h-8" />
