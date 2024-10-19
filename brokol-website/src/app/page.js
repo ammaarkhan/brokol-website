@@ -95,11 +95,7 @@ export default function Home() {
               ></iframe>
             </div>
           </div>
-
-
-
         </section>
-
 
         <section
           id="supported-by"
@@ -126,7 +122,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="benefits" className="scroll-offset bg-white text-black pt-4 pb-20">
+        <section
+          id="benefits"
+          className="scroll-offset bg-white text-black pt-4 pb-20"
+        >
           <div className="container mx-auto text-center max-w-4xl px-4 sm:px-0">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">
               Why Brokol Meal Planner? What benefits you get?
@@ -135,11 +134,11 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-8 px-4 sm:px-0">
               <div className="flex items-stretch p-4 bg-background-green text-white rounded-lg mx-auto w-full sm:w-[400px] md:max-w-md">
                 <div className="flex items-center justify-center min-w-[90px] sm:min-w-[110px] min-h-[90px] sm:min-h-[110px] mr-4 bg-white rounded-lg">
-                <Image
-                  src={benefit1}
-                  alt="Reduce Overwhelm"
-                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
-                />
+                  <Image
+                    src={benefit1}
+                    alt="Reduce Overwhelm"
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+                  />
                 </div>
                 <div className="flex flex-col justify-center flex-grow gap-3">
                   <h3 className="pl-3 text-left text-lg sm:text-xl font-semibold">
@@ -285,18 +284,21 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="md:w-1/2 flex justify-center items-center mx-10 md:mt-10 md:mr-10">
-                <Image
-                  src={step3}
-                  alt="Step 3"
-                  className="rounded-t-lg shadow-lg object-cover  md:w-4/5"
-                />
+                  <Image
+                    src={step3}
+                    alt="Step 3"
+                    className="rounded-t-lg shadow-lg object-cover  md:w-4/5"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="testimonials" className="scroll-offset bg-white text-black py-16">
+        <section
+          id="testimonials"
+          className="scroll-offset bg-white text-black py-16"
+        >
           <div className="container mx-auto text-left max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-normal mb-8 px-5">
               Don&apos;t just take our words.{" "}
@@ -392,20 +394,28 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex space-x-4">
-                <a href="https://www.instagram.com/brokol.app/" aria-label="Instagram">
-                  <Image
-                    src={instagram}
-                    alt="Instagram"
-                    className="w-8 h-8"
-                  />
+                <a
+                  href="https://www.instagram.com/brokol.planner/"
+                  aria-label="Instagram"
+                >
+                  <Image src={instagram} alt="Instagram" className="w-8 h-8" />
                 </a>
-                <a href="https://www.linkedin.com/company/brokol/" aria-label="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/company/brokol/"
+                  aria-label="LinkedIn"
+                >
                   <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
                 </a>
-                <a href="https://www.tiktok.com/@brokol.planner" aria-label="TikTok">
+                <a
+                  href="https://www.tiktok.com/@brokol.planner"
+                  aria-label="TikTok"
+                >
                   <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
                 </a>
-                <a href="https://www.threads.net/@brokol.app?hl=en" aria-label="Threads">
+                <a
+                  href="https://www.threads.net/@brokol.planner?hl=en"
+                  aria-label="Threads"
+                >
                   <Image src={threads} alt="Threads" className="w-8 h-8" />
                 </a>
               </div>
@@ -438,20 +448,32 @@ export default function Home() {
                   BROKOL
                 </h3>
                 <div className="flex space-x-4">
-                  <a href="https://www.instagram.com/brokol.app/" aria-label="Instagram">
+                  <a
+                    href="https://www.instagram.com/brokol.app/"
+                    aria-label="Instagram"
+                  >
                     <Image
                       src={instagram}
                       alt="Instagram"
                       className="w-8 h-8 mt-1"
                     />
                   </a>
-                  <a href="https://www.linkedin.com/company/brokol/" aria-label="LinkedIn">
+                  <a
+                    href="https://www.linkedin.com/company/brokol/"
+                    aria-label="LinkedIn"
+                  >
                     <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
                   </a>
-                  <a href="https://www.tiktok.com/@brokol.planner" aria-label="TikTok">
+                  <a
+                    href="https://www.tiktok.com/@brokol.planner"
+                    aria-label="TikTok"
+                  >
                     <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
                   </a>
-                  <a href="https://www.threads.net/@brokol.app?hl=en" aria-label="Threads">
+                  <a
+                    href="https://www.threads.net/@brokol.app?hl=en"
+                    aria-label="Threads"
+                  >
                     <Image src={threads} alt="Threads" className="w-8 h-8" />
                   </a>
                 </div>
@@ -490,7 +512,6 @@ export default function Home() {
             </a>
           </div>
         </section>
-
 
         {/* Add more sections here */}
       </main>
