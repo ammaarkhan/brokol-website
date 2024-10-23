@@ -420,7 +420,7 @@ export default function Home() {
               </div>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.instagram.com/brokol.planner/"
+                  href="https://www.instagram.com/feed.my.adhd/"
                   aria-label="Instagram"
                 >
                   <Image src={instagram} alt="Instagram" className="w-8 h-8" />
@@ -432,13 +432,13 @@ export default function Home() {
                   <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
                 </a>
                 <a
-                  href="https://www.tiktok.com/@brokol.planner"
+                  href="https://www.tiktok.com/@feed.my.adhd"
                   aria-label="TikTok"
                 >
                   <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
                 </a>
                 <a
-                  href="https://www.threads.net/@brokol.planner?hl=en"
+                  href="https://www.threads.net/@feed.my.adhd?hl=en"
                   aria-label="Threads"
                 >
                   <Image src={threads} alt="Threads" className="w-8 h-8" />
@@ -474,7 +474,7 @@ export default function Home() {
                 </h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://www.instagram.com/brokol.planner/"
+                    href="https://www.instagram.com/feed.my.adhd/"
                     aria-label="Instagram"
                   >
                     <Image
@@ -490,13 +490,13 @@ export default function Home() {
                     <Image src={linkedin} alt="LinkedIn" className="w-8 h-8" />
                   </a>
                   <a
-                    href="https://www.tiktok.com/@brokol.planner"
+                    href="https://www.tiktok.com/@feed.my.adhd"
                     aria-label="TikTok"
                   >
                     <Image src={tiktok} alt="TikTok" className="w-8 h-8" />
                   </a>
                   <a
-                    href="https://www.threads.net/@brokol.planner?hl=en"
+                    href="https://www.threads.net/@feed.my.adhd?hl=en"
                     aria-label="Threads"
                   >
                     <Image src={threads} alt="Threads" className="w-8 h-8" />
