@@ -87,7 +87,7 @@ export default function Home() {
                 type="submit"
                 className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
               >
-                End Planning Overwhelm
+                End the Overwhelm
               </button>
             </form>
             {/* Display the message if it's set */}
@@ -391,7 +391,7 @@ export default function Home() {
                     type="submit"
                     className="w-11/12 md:w-auto px-4 py-2 bg-brokol-green hover:bg-gray-700 text-white rounded-lg md:rounded-r-lg md:rounded-l-none"
                   >
-                    End Planning Overwhelm
+                    End the Overwhelm
                   </button>
                 </form>
 
